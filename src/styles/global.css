@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/* MP Consulting colour palette */
+@theme {
+  /* Warm coral accent - approachable, energetic */
+  --color-accent-50: #fff7f5;
+  --color-accent-100: #ffede8;
+  --color-accent-200: #ffd9d0;
+  --color-accent-300: #ffb8a8;
+  --color-accent-400: #ff8c73;
+  --color-accent-500: #f86a4d;
+  --color-accent-600: #e54d2e;
+  --color-accent-700: #c13d22;
+  --color-accent-800: #9f3520;
+  --color-accent-900: #833221;
+  --color-accent-950: #47160c;
+
+  /* Neutral grays for B&W aesthetic */
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+  --color-neutral-950: #0a0a0a;
+}
+
+/* Dark mode toggle via class */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Base styles */
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-neutral-50 text-neutral-900 antialiased;
+    @apply dark:bg-neutral-950 dark:text-neutral-100;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  /* Notion-inspired clean typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+
+  h1 { @apply text-4xl md:text-5xl; }
+  h2 { @apply text-3xl md:text-4xl; }
+  h3 { @apply text-2xl md:text-3xl; }
+
+  a {
+    @apply text-accent-600 hover:text-accent-700 transition-colors;
+    @apply dark:text-accent-400 dark:hover:text-accent-300;
+  }
+}

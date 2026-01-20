@@ -1,0 +1,42 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+import site from '../data/site.json';
+---
+
+<header class="sticky top-0 z-50 bg-neutral-50/80 dark:bg-neutral-950/80 backdrop-blur-sm border-b border-neutral-200 dark:border-neutral-800">
+  <nav class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo / Avatar -->
+      <a href="/" class="flex items-center gap-3 text-neutral-900 dark:text-neutral-100 hover:text-neutral-900 dark:hover:text-neutral-100">
+        <img
+          src="/avatar.png"
+          alt="MP"
+          class="w-10 h-10 rounded-full bg-neutral-200 dark:bg-neutral-800"
+          onerror="this.style.display='none'"
+        />
+        <span class="font-semibold text-lg">{site.shortName}</span>
+      </a>
+
+      <!-- Navigation -->
+      <div class="flex items-center gap-1 sm:gap-2">
+        {site.nav.map((item) => (
+          <a
+            href={item.href}
+            class="px-3 py-2 text-sm font-medium text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 transition-colors"
+          >
+            {item.label}
+          </a>
+        ))}
+
+        <a
+          href="/contact"
+          class="ml-2 px-4 py-2 text-sm font-medium rounded-lg bg-accent-600 text-white hover:bg-accent-700 transition-colors"
+        >
+          Let's Talk
+        </a>
+
+        <ThemeToggle />
+      </div>
+    </div>
+  </nav>
+</header>

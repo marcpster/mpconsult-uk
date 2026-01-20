@@ -1,16 +1,35 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import site from '../data/site.json';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <!-- Hero Section -->
+  <section class="py-20 md:py-32">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h1 class="text-neutral-900 dark:text-neutral-100 mb-6">
+          {site.tagline}
+        </h1>
+        <p class="text-xl text-neutral-600 dark:text-neutral-400 mb-8">
+          Websites, analytics, email, automation — so it actually works.
+        </p>
+        <a
+          href="/contact"
+          class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg bg-accent-600 text-white hover:bg-accent-700 transition-colors"
+        >
+          Let's talk
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Placeholder for remaining sections -->
+  <section class="py-16 border-t border-neutral-200 dark:border-neutral-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-neutral-500 dark:text-neutral-400">
+        Phase 1 complete — foundation is ready. Home page sections coming next.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

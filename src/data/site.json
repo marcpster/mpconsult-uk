@@ -1,0 +1,21 @@
+{
+  "name": "MP Consulting",
+  "shortName": "MP",
+  "tagline": "I help small businesses sort out their tech and marketing.",
+  "description": "Tech and marketing consulting for small businesses. Websites, analytics, email, automation - so it actually works.",
+  "domain": "mpconsult.uk",
+  "email": "hello@mpconsult.uk",
+  "location": "Farnham, Surrey",
+  "legal": {
+    "company": "Morfology Ltd",
+    "note": "Trading as MP Consulting. Registered in England."
+  },
+  "social": {
+    "linkedin": "https://linkedin.com/in/marcpower"
+  },
+  "nav": [
+    { "label": "Services", "href": "/services" },
+    { "label": "Work", "href": "/work" },
+    { "label": "About", "href": "/about" }
+  ]
+}
