@@ -39,23 +39,37 @@
   }
 
   body {
-    @apply bg-neutral-50 text-neutral-900 antialiased;
+    @apply bg-neutral-50 text-neutral-900 antialiased leading-relaxed;
     @apply dark:bg-neutral-950 dark:text-neutral-100;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
 
   /* Notion-inspired clean typography */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold tracking-tight;
+    @apply font-semibold tracking-tight leading-tight;
   }
 
-  h1 { @apply text-4xl md:text-5xl; }
-  h2 { @apply text-3xl md:text-4xl; }
-  h3 { @apply text-2xl md:text-3xl; }
+  h1 { @apply text-3xl sm:text-4xl md:text-5xl; }
+  h2 { @apply text-2xl sm:text-3xl md:text-4xl; }
+  h3 { @apply text-xl sm:text-2xl; }
+
+  p {
+    @apply leading-relaxed;
+  }
 
   a {
     @apply text-accent-600 hover:text-accent-700 transition-colors;
     @apply dark:text-accent-400 dark:hover:text-accent-300;
+  }
+
+  /* Better focus states for accessibility */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent-500;
+  }
+
+  /* Smooth transitions globally */
+  * {
+    @apply transition-colors duration-150;
   }
 }
 
