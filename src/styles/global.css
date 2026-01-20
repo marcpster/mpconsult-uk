@@ -58,3 +58,50 @@
     @apply dark:text-accent-400 dark:hover:text-accent-300;
   }
 }
+
+/* Prose styles for markdown content */
+@layer components {
+  .prose {
+    @apply text-neutral-700 dark:text-neutral-300;
+  }
+
+  .prose h2 {
+    @apply text-xl md:text-2xl font-semibold text-neutral-900 dark:text-neutral-100 mt-10 mb-4;
+  }
+
+  .prose h3 {
+    @apply text-lg md:text-xl font-semibold text-neutral-900 dark:text-neutral-100 mt-8 mb-3;
+  }
+
+  .prose p {
+    @apply mb-4 leading-relaxed;
+  }
+
+  .prose ul, .prose ol {
+    @apply mb-4 pl-6;
+  }
+
+  .prose ul {
+    @apply list-disc;
+  }
+
+  .prose ol {
+    @apply list-decimal;
+  }
+
+  .prose li {
+    @apply mb-2;
+  }
+
+  .prose strong {
+    @apply font-semibold text-neutral-900 dark:text-neutral-100;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-accent-300 dark:border-accent-700 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6;
+  }
+
+  .prose a {
+    @apply text-accent-600 dark:text-accent-400 underline;
+  }
+}

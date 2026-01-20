@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import { getCollection } from 'astro:content';
+
+const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title="Services" description="Tech and marketing services for small businesses. Websites, SEO, email, analytics, and automation.">
+  <section class="py-16 md:py-24">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-neutral-900 dark:text-neutral-100 mb-4">
+        Services
+      </h1>
+      <p class="text-xl text-neutral-600 dark:text-neutral-400 mb-12 max-w-2xl">
+        No overlapping categories. Each service is a clear answer to "what do you actually do?"
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        {services.map((service) => (
+          <ServiceCard
+            title={service.data.title}
+            tagline={service.data.tagline}
+            href={`/services/${service.id}`}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-24 bg-neutral-100 dark:bg-neutral-900">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-neutral-900 dark:text-neutral-100 mb-4">
+        Not sure what you need?
+      </h2>
+      <p class="text-neutral-600 dark:text-neutral-400 mb-8 max-w-xl mx-auto">
+        Let's have a conversation. I'll tell you honestly what's worth doing — and what isn't.
+      </p>
+      <a
+        href="/contact"
+        class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg bg-accent-600 text-white hover:bg-accent-700 transition-colors"
+      >
+        Let's talk
+      </a>
+    </div>
+  </section>
+</BaseLayout>

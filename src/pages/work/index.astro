@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title="Work" description="Case studies and results from working with small businesses on tech and marketing.">
+  <section class="py-16 md:py-24">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-neutral-900 dark:text-neutral-100 mb-4">
+        Work
+      </h1>
+      <p class="text-xl text-neutral-600 dark:text-neutral-400 mb-12 max-w-2xl">
+        Real results from real projects. No fluff, just what actually happened.
+      </p>
+
+      <div class="space-y-8">
+        {work.map((study) => (
+          <a
+            href={`/work/${study.id}`}
+            class="block p-6 md:p-8 rounded-xl border border-neutral-200 dark:border-neutral-800 hover:border-accent-300 dark:hover:border-accent-700 bg-white dark:bg-neutral-900 transition-all hover:shadow-sm group"
+          >
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+              <div>
+                <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-1">{study.data.industry}</p>
+                <h2 class="text-xl md:text-2xl font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors">
+                  {study.data.title}
+                </h2>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                {study.data.services.map((service: string) => (
+                  <span class="px-2 py-1 text-xs font-medium rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400">
+                    {service}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
+              {study.data.stats.slice(0, 3).map((stat: { value: string; label: string }) => (
+                <div>
+                  <div class="text-2xl font-bold text-accent-600 dark:text-accent-400">{stat.value}</div>
+                  <div class="text-sm text-neutral-600 dark:text-neutral-400">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-24 bg-neutral-100 dark:bg-neutral-900">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-neutral-900 dark:text-neutral-100 mb-4">
+        Want results like these?
+      </h2>
+      <p class="text-neutral-600 dark:text-neutral-400 mb-8 max-w-xl mx-auto">
+        Every project starts with a conversation about what you're trying to achieve.
+      </p>
+      <a
+        href="/contact"
+        class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg bg-accent-600 text-white hover:bg-accent-700 transition-colors"
+      >
+        Let's talk
+      </a>
+    </div>
+  </section>
+</BaseLayout>

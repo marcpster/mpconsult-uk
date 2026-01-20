@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import site from '../data/site.json';
+---
+
+<BaseLayout title="Contact" description="Get in touch to discuss your tech and marketing needs.">
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-neutral-900 dark:text-neutral-100 mb-4">
+        Let's talk
+      </h1>
+      <p class="text-xl text-neutral-600 dark:text-neutral-400 mb-12">
+        No pitch, no pressure. Just a conversation about where you're stuck and whether I can help.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Contact options -->
+        <div class="space-y-8">
+          <div>
+            <h2 class="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
+              Book a call
+            </h2>
+            <p class="text-neutral-600 dark:text-neutral-400 mb-4">
+              30 minutes to discuss what you're trying to achieve. Free, no obligation.
+            </p>
+            <a
+              href="#"
+              class="inline-flex items-center px-5 py-2.5 text-sm font-medium rounded-lg bg-accent-600 text-white hover:bg-accent-700 transition-colors"
+            >
+              Schedule a time
+            </a>
+          </div>
+
+          <div>
+            <h2 class="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
+              Email
+            </h2>
+            <p class="text-neutral-600 dark:text-neutral-400 mb-2">
+              Prefer to write? I'll get back to you within a day.
+            </p>
+            <a
+              href={`mailto:${site.email}`}
+              class="text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300"
+            >
+              {site.email}
+            </a>
+          </div>
+
+          <div>
+            <h2 class="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
+              LinkedIn
+            </h2>
+            <p class="text-neutral-600 dark:text-neutral-400 mb-2">
+              Connect or send a message.
+            </p>
+            <a
+              href={site.social.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300"
+            >
+              View profile
+            </a>
+          </div>
+
+          <div class="pt-4 border-t border-neutral-200 dark:border-neutral-800">
+            <p class="text-sm text-neutral-500 dark:text-neutral-400">
+              Based in {site.location}, working with clients across the UK.
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <div>
+          <form
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+            class="space-y-6"
+          >
+            <div>
+              <label for="name" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
+                Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                required
+                class="w-full px-4 py-2.5 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition-colors"
+              />
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                class="w-full px-4 py-2.5 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition-colors"
+              />
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
+                What can I help with?
+              </label>
+              <textarea
+                name="message"
+                id="message"
+                rows="4"
+                required
+                class="w-full px-4 py-2.5 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition-colors resize-none"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full px-6 py-3 text-base font-medium rounded-lg bg-accent-600 text-white hover:bg-accent-700 transition-colors"
+            >
+              Send message
+            </button>
+          </form>
+          <p class="mt-4 text-xs text-neutral-500 dark:text-neutral-400">
+            Your information won't be shared with anyone else.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

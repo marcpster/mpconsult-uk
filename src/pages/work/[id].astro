@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const work = await getCollection('work');
+  return work.map((study) => ({
+    params: { id: study.id },
+    props: { study },
+  }));
+}
+
+const { study } = Astro.props;
+const { Content } = await render(study);
+---
+
+<BaseLayout title={study.data.title} description={`Case study: ${study.data.client} - ${study.data.industry}`}>
+  <article class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Header -->
+      <header class="mb-12">
+        <p class="text-accent-600 dark:text-accent-400 font-medium mb-2">{study.data.industry}</p>
+        <h1 class="text-neutral-900 dark:text-neutral-100 mb-4">
+          {study.data.title}
+        </h1>
+        <div class="flex flex-wrap gap-2">
+          {study.data.services.map((service: string) => (
+            <span class="px-3 py-1 text-sm font-medium rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400">
+              {service}
+            </span>
+          ))}
+        </div>
+      </header>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12 p-6 rounded-xl bg-neutral-100 dark:bg-neutral-900">
+        {study.data.stats.map((stat: { value: string; label: string }) => (
+          <div class="text-center">
+            <div class="text-2xl md:text-3xl font-bold text-accent-600 dark:text-accent-400">{stat.value}</div>
+            <div class="text-sm text-neutral-600 dark:text-neutral-400">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Content -->
+      <div class="prose prose-neutral dark:prose-invert max-w-none">
+        <Content />
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-12 pt-12 border-t border-neutral-200 dark:border-neutral-800">
+        <h2 class="text-2xl font-semibold text-neutral-900 dark:text-neutral-100 mb-4">
+          Want similar results?
+        </h2>
+        <p class="text-neutral-600 dark:text-neutral-400 mb-6">
+          Let's talk about what's possible for your business.
+        </p>
+        <a
+          href="/contact"
+          class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg bg-accent-600 text-white hover:bg-accent-700 transition-colors"
+        >
+          Get in touch
+        </a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

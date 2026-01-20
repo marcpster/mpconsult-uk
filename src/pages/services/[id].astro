@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const services = await getCollection('services');
+  return services.map((service) => ({
+    params: { id: service.id },
+    props: { service },
+  }));
+}
+
+const { service } = Astro.props;
+const { Content } = await render(service);
+---
+
+<BaseLayout title={service.data.title} description={service.data.tagline}>
+  <article class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Header -->
+      <header class="mb-12">
+        <p class="text-accent-600 dark:text-accent-400 font-medium mb-2">Service</p>
+        <h1 class="text-neutral-900 dark:text-neutral-100 mb-4">
+          {service.data.title}
+        </h1>
+        <p class="text-xl text-neutral-600 dark:text-neutral-400">
+          {service.data.tagline}
+        </p>
+      </header>
+
+      <!-- Features -->
+      {service.data.features && (
+        <div class="mb-12 p-6 rounded-xl bg-neutral-100 dark:bg-neutral-900">
+          <h2 class="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-4">What you get</h2>
+          <ul class="space-y-2">
+            {service.data.features.map((feature: string) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-accent-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-neutral-700 dark:text-neutral-300">{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      <!-- Content -->
+      <div class="prose prose-neutral dark:prose-invert max-w-none">
+        <Content />
+      </div>
+
+      <!-- Proof -->
+      {service.data.proof && (
+        <div class="mt-12 p-6 rounded-xl border border-neutral-200 dark:border-neutral-800">
+          <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-1">Recent result</p>
+          <p class="font-medium text-neutral-900 dark:text-neutral-100">{service.data.proof.client}</p>
+          <p class="text-accent-600 dark:text-accent-400">{service.data.proof.result}</p>
+        </div>
+      )}
+
+      <!-- CTA -->
+      <div class="mt-12 pt-12 border-t border-neutral-200 dark:border-neutral-800">
+        <h2 class="text-2xl font-semibold text-neutral-900 dark:text-neutral-100 mb-4">
+          Interested?
+        </h2>
+        <p class="text-neutral-600 dark:text-neutral-400 mb-6">
+          Let's talk about whether this is right for you.
+        </p>
+        <a
+          href="/contact"
+          class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg bg-accent-600 text-white hover:bg-accent-700 transition-colors"
+        >
+          Get in touch
+        </a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

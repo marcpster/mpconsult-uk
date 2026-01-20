@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import site from '../data/site.json';
+---
+
+<BaseLayout title="About" description="Meet MP - tech consultant helping small businesses get their tech and marketing sorted.">
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Header with avatar -->
+      <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start mb-12">
+        <img
+          src="/avatar.png"
+          alt="MP"
+          class="w-24 h-24 md:w-32 md:h-32 rounded-full bg-neutral-200 dark:bg-neutral-800 flex-shrink-0"
+          onerror="this.style.display='none'"
+        />
+        <div>
+          <h1 class="text-neutral-900 dark:text-neutral-100 mb-4">
+            Hi, I'm MP
+          </h1>
+          <p class="text-xl text-neutral-600 dark:text-neutral-400">
+            I help small businesses sort out their tech and marketing — so it actually works.
+          </p>
+        </div>
+      </div>
+
+      <!-- Story -->
+      <div class="prose prose-neutral dark:prose-invert max-w-none">
+        <h2>The short version</h2>
+        <p>
+          I'm a tech consultant based in Surrey, working with small businesses across the UK.
+          I've spent years in enterprise tech — large-scale projects, complex systems, big budgets.
+          Now I help smaller teams get the same results without the complexity (or the price tag).
+        </p>
+
+        <h2>Why I do this</h2>
+        <p>
+          Small businesses deserve better than overpriced agencies, cookie-cutter solutions,
+          and "experts" who disappear after the invoice is paid. I've seen too many business
+          owners burned by tech projects that promised the world and delivered confusion.
+        </p>
+        <p>
+          I work differently. I start by understanding what you're actually trying to achieve.
+          Then I tell you honestly what's worth doing — and what isn't. No upselling, no jargon,
+          no solutions looking for problems.
+        </p>
+
+        <h2>How I work</h2>
+        <p>
+          I use modern tools (including AI) to work faster and smarter. That means quicker
+          turnaround and better value for you. But the tools are just tools — what matters
+          is understanding your business and delivering something that actually helps.
+        </p>
+        <p>
+          You work with me directly. Not a rotating team, not a junior who's "learning on the job".
+          When you have a question, you get an answer from someone who knows your project inside out.
+        </p>
+
+        <h2>The boring but important bit</h2>
+        <p>
+          MP Consulting is a trading name of Morfology Ltd, registered in England.
+          I'm based in Farnham, Surrey, but work with clients across the UK (and occasionally beyond).
+        </p>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-12 pt-12 border-t border-neutral-200 dark:border-neutral-800">
+        <h2 class="text-2xl font-semibold text-neutral-900 dark:text-neutral-100 mb-4">
+          Want to work together?
+        </h2>
+        <p class="text-neutral-600 dark:text-neutral-400 mb-6">
+          Let's have a conversation. No pitch, no pressure — just a chat about what you're trying to achieve.
+        </p>
+        <a
+          href="/contact"
+          class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg bg-accent-600 text-white hover:bg-accent-700 transition-colors"
+        >
+          Get in touch
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
