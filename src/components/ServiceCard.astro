@@ -1,0 +1,27 @@
+---
+interface Props {
+  title: string;
+  tagline: string;
+  href: string;
+}
+
+const { title, tagline, href } = Astro.props;
+---
+
+<a
+  href={href}
+  class="group block p-6 rounded-xl border border-neutral-200 dark:border-neutral-800 hover:border-accent-300 dark:hover:border-accent-700 bg-white dark:bg-neutral-900 transition-all hover:shadow-sm"
+>
+  <h3 class="text-lg font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors">
+    {title}
+  </h3>
+  <p class="mt-2 text-neutral-600 dark:text-neutral-400">
+    {tagline}
+  </p>
+  <span class="inline-flex items-center mt-4 text-sm font-medium text-accent-600 dark:text-accent-400">
+    Learn more
+    <svg class="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+  </span>
+</a>
