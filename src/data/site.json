@@ -10,6 +10,9 @@
     "company": "Morfology Ltd",
     "note": "Trading as MP Consulting. Registered in England."
   },
+  "analytics": {
+    "cloudflareToken": ""
+  },
   "social": {
     "linkedin": "https://linkedin.com/in/marcpower"
   },
