@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "title": "Work",
+    "description": "Case studies and results from working with small businesses on tech and marketing."
+  },
+  "header": {
+    "heading": "Work",
+    "subtitle": "Real results from real projects. No fluff, just what actually happened."
+  },
+  "cardCta": "Read the case study",
+  "cta": {
+    "heading": "Want results like these?",
+    "description": "Every project starts with a conversation about what you're trying to achieve.",
+    "label": "Let's talk",
+    "href": "/contact"
+  }
+}

@@ -1,22 +1,23 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import work from '../../data/work.json';
 
-const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+const studies = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
 ---
 
-<BaseLayout title="Work" description="Case studies and results from working with small businesses on tech and marketing.">
+<BaseLayout title={work.meta.title} description={work.meta.description}>
   <section class="py-16 md:py-24">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <h1 class="text-neutral-900 dark:text-neutral-100 mb-4">
-        Work
+        {work.header.heading}
       </h1>
       <p class="text-xl text-neutral-600 dark:text-neutral-400 mb-12 max-w-2xl">
-        Real results from real projects. No fluff, just what actually happened.
+        {work.header.subtitle}
       </p>
 
       <div class="space-y-8">
-        {work.map((study) => (
+        {studies.map((study) => (
           <a
             href={`/work/${study.id}`}
             class="block p-6 md:p-8 rounded-xl border border-neutral-200 dark:border-neutral-800 hover:border-accent-300 dark:hover:border-accent-700 bg-white dark:bg-neutral-900 transition-all hover:shadow-sm group"
@@ -45,6 +46,15 @@ const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.
                 </div>
               ))}
             </div>
+
+            <div class="mt-6 pt-6 border-t border-neutral-200 dark:border-neutral-800 flex justify-end">
+              <span class="inline-flex items-center px-5 py-2.5 text-sm font-medium rounded-lg bg-accent-600 text-white group-hover:bg-accent-700 transition-colors">
+                {work.cardCta}
+                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </div>
           </a>
         ))}
       </div>
@@ -55,16 +65,16 @@ const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.
   <section class="py-16 md:py-24 bg-neutral-100 dark:bg-neutral-900">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-neutral-900 dark:text-neutral-100 mb-4">
-        Want results like these?
+        {work.cta.heading}
       </h2>
       <p class="text-neutral-600 dark:text-neutral-400 mb-8 max-w-xl mx-auto">
-        Every project starts with a conversation about what you're trying to achieve.
+        {work.cta.description}
       </p>
       <a
-        href="/contact"
+        href={work.cta.href}
         class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg bg-accent-600 text-white hover:bg-accent-700 transition-colors"
       >
-        Let's talk
+        {work.cta.label}
       </a>
     </div>
   </section>
