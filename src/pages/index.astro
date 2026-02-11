@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import StatCard from '../components/StatCard.astro';
 import site from '../data/site.json';
+import homepage from '../data/homepage.json';
 import { getCollection } from 'astro:content';
 
 // Get services sorted by order
@@ -25,13 +26,13 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
             {site.tagline}
           </h1>
           <p class="text-xl text-neutral-600 dark:text-neutral-400 mb-8">
-            Websites, analytics, email, automation — so it actually works.
+            {homepage.hero.subheadline}
           </p>
           <a
-            href="/contact"
+            href={homepage.hero.cta.href}
             class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg bg-accent-600 text-white hover:bg-accent-700 transition-colors"
           >
-            Let's talk
+            {homepage.hero.cta.label}
           </a>
         </div>
       </div>
@@ -42,36 +43,18 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
   <section class="py-16 md:py-24 bg-neutral-100 dark:bg-neutral-900">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-neutral-900 dark:text-neutral-100 mb-8">
-        Sound familiar?
+        {homepage.problems.heading}
       </h2>
       <ul class="grid md:grid-cols-2 gap-4 mb-8">
-        <li class="flex items-start gap-3">
-          <span class="text-accent-500 mt-1">—</span>
-          <span class="text-neutral-700 dark:text-neutral-300">Your website exists but doesn't bring in leads</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="text-accent-500 mt-1">—</span>
-          <span class="text-neutral-700 dark:text-neutral-300">You've got tools but they don't talk to each other</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="text-accent-500 mt-1">—</span>
-          <span class="text-neutral-700 dark:text-neutral-300">Marketing feels like guesswork</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="text-accent-500 mt-1">—</span>
-          <span class="text-neutral-700 dark:text-neutral-300">You're doing the same tasks over and over</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="text-accent-500 mt-1">—</span>
-          <span class="text-neutral-700 dark:text-neutral-300">You've been burned by "tech people" before</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="text-accent-500 mt-1">—</span>
-          <span class="text-neutral-700 dark:text-neutral-300">You know you should be doing more but don't know where to start</span>
-        </li>
+        {homepage.problems.items.map((item) => (
+          <li class="flex items-start gap-3">
+            <span class="text-accent-500 mt-1">—</span>
+            <span class="text-neutral-700 dark:text-neutral-300">{item}</span>
+          </li>
+        ))}
       </ul>
       <p class="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl">
-        You don't need more tools. You need the right setup — and someone to help you get there.
+        {homepage.problems.closing}
       </p>
     </div>
   </section>
@@ -80,7 +63,7 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
   <section class="py-16 md:py-24">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-neutral-900 dark:text-neutral-100 mb-8">
-        Here's how I can help
+        {homepage.services.heading}
       </h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {services.map((service) => (
@@ -93,10 +76,10 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
       </div>
       <div class="mt-8">
         <a
-          href="/services"
+          href={homepage.services.cta.href}
           class="inline-flex items-center text-accent-600 dark:text-accent-400 font-medium hover:text-accent-700 dark:hover:text-accent-300"
         >
-          See all services
+          {homepage.services.cta.label}
           <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
           </svg>
@@ -109,27 +92,27 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
   <section class="py-16 md:py-24 bg-neutral-100 dark:bg-neutral-900">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-neutral-900 dark:text-neutral-100 mb-12 text-center">
-        Real results, not just promises
+        {homepage.proof.heading}
       </h2>
       <div class="grid md:grid-cols-3 gap-8 mb-12">
-        <StatCard value="£139,700" label="Annual value delivered to a recruitment firm" />
-        <StatCard value="77%" label="Time saved on manual tasks" />
-        <StatCard value="Weeks" label="Typical website delivery, not months" />
+        {homepage.proof.stats.map((stat) => (
+          <StatCard value={stat.value} label={stat.label} />
+        ))}
       </div>
       <blockquote class="max-w-2xl mx-auto text-center">
         <p class="text-lg italic text-neutral-700 dark:text-neutral-300 mb-4">
-          "MP actually listened to what we needed, not just sold us what he wanted to build."
+          "{homepage.proof.testimonial.quote}"
         </p>
         <cite class="text-sm text-neutral-500 dark:text-neutral-500 not-italic">
-          — Specialist recruitment firm
+          {homepage.proof.testimonial.attribution}
         </cite>
       </blockquote>
       <div class="mt-8 text-center">
         <a
-          href="/work"
+          href={homepage.proof.cta.href}
           class="inline-flex items-center text-accent-600 dark:text-accent-400 font-medium hover:text-accent-700 dark:hover:text-accent-300"
         >
-          See the work
+          {homepage.proof.cta.label}
           <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
           </svg>
@@ -142,47 +125,21 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
   <section class="py-16 md:py-24">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-neutral-900 dark:text-neutral-100 mb-8">
-        No surprises
+        {homepage.process.heading}
       </h2>
       <ol class="space-y-6 max-w-2xl">
-        <li class="flex gap-4">
-          <span class="flex-shrink-0 w-8 h-8 rounded-full bg-accent-100 dark:bg-accent-900 text-accent-600 dark:text-accent-400 flex items-center justify-center font-semibold text-sm">1</span>
-          <div>
-            <h3 class="font-semibold text-neutral-900 dark:text-neutral-100">We talk</h3>
-            <p class="text-neutral-600 dark:text-neutral-400">I learn about your business, you learn if I can help</p>
-          </div>
-        </li>
-        <li class="flex gap-4">
-          <span class="flex-shrink-0 w-8 h-8 rounded-full bg-accent-100 dark:bg-accent-900 text-accent-600 dark:text-accent-400 flex items-center justify-center font-semibold text-sm">2</span>
-          <div>
-            <h3 class="font-semibold text-neutral-900 dark:text-neutral-100">Discovery</h3>
-            <p class="text-neutral-600 dark:text-neutral-400">I dig into what's actually going on (not what you think is going on)</p>
-          </div>
-        </li>
-        <li class="flex gap-4">
-          <span class="flex-shrink-0 w-8 h-8 rounded-full bg-accent-100 dark:bg-accent-900 text-accent-600 dark:text-accent-400 flex items-center justify-center font-semibold text-sm">3</span>
-          <div>
-            <h3 class="font-semibold text-neutral-900 dark:text-neutral-100">Recommendation</h3>
-            <p class="text-neutral-600 dark:text-neutral-400">Clear options, honest about what's worth doing</p>
-          </div>
-        </li>
-        <li class="flex gap-4">
-          <span class="flex-shrink-0 w-8 h-8 rounded-full bg-accent-100 dark:bg-accent-900 text-accent-600 dark:text-accent-400 flex items-center justify-center font-semibold text-sm">4</span>
-          <div>
-            <h3 class="font-semibold text-neutral-900 dark:text-neutral-100">Build</h3>
-            <p class="text-neutral-600 dark:text-neutral-400">I do the work, you stay in the loop</p>
-          </div>
-        </li>
-        <li class="flex gap-4">
-          <span class="flex-shrink-0 w-8 h-8 rounded-full bg-accent-100 dark:bg-accent-900 text-accent-600 dark:text-accent-400 flex items-center justify-center font-semibold text-sm">5</span>
-          <div>
-            <h3 class="font-semibold text-neutral-900 dark:text-neutral-100">Handover</h3>
-            <p class="text-neutral-600 dark:text-neutral-400">You understand what you've got and how to use it</p>
-          </div>
-        </li>
+        {homepage.process.steps.map((step) => (
+          <li class="flex gap-4">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-accent-100 dark:bg-accent-900 text-accent-600 dark:text-accent-400 flex items-center justify-center font-semibold text-sm">{step.number}</span>
+            <div>
+              <h3 class="font-semibold text-neutral-900 dark:text-neutral-100">{step.title}</h3>
+              <p class="text-neutral-600 dark:text-neutral-400">{step.description}</p>
+            </div>
+          </li>
+        ))}
       </ol>
       <p class="mt-8 text-neutral-600 dark:text-neutral-400 max-w-2xl">
-        I'll tell you if something's not worth doing. I'd rather do less, well.
+        {homepage.process.closing}
       </p>
     </div>
   </section>
@@ -199,19 +156,18 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
         />
         <div>
           <h2 class="text-neutral-900 dark:text-neutral-100 mb-4">
-            Who's MP?
+            {homepage.about.heading}
           </h2>
-          <p class="text-neutral-700 dark:text-neutral-300 mb-4">
-            I'm a tech consultant based in Surrey, working with small businesses across the UK. I've spent years in enterprise tech — now I help smaller teams get the same results without the complexity (or the price tag).
-          </p>
-          <p class="text-neutral-700 dark:text-neutral-300 mb-6">
-            I use modern tools (including AI) to work faster and smarter. That means quicker turnaround and better value for you.
-          </p>
+          {homepage.about.paragraphs.map((para, i) => (
+            <p class={`text-neutral-700 dark:text-neutral-300 ${i < homepage.about.paragraphs.length - 1 ? 'mb-4' : 'mb-6'}`}>
+              {para}
+            </p>
+          ))}
           <a
-            href="/about"
+            href={homepage.about.cta.href}
             class="inline-flex items-center text-accent-600 dark:text-accent-400 font-medium hover:text-accent-700 dark:hover:text-accent-300"
           >
-            More about me
+            {homepage.about.cta.label}
             <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
@@ -225,23 +181,23 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
   <section class="py-20 md:py-32">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-neutral-900 dark:text-neutral-100 mb-4">
-        Let's figure out what you actually need
+        {homepage.finalCta.heading}
       </h2>
       <p class="text-lg text-neutral-600 dark:text-neutral-400 mb-8 max-w-xl mx-auto">
-        No pitch, no pressure. Just a conversation about where you're stuck and whether I can help.
+        {homepage.finalCta.subheading}
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a
-          href="/contact"
+          href={homepage.finalCta.primary.href}
           class="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg bg-accent-600 text-white hover:bg-accent-700 transition-colors"
         >
-          Book a call
+          {homepage.finalCta.primary.label}
         </a>
         <a
           href={`mailto:${site.email}`}
           class="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
         >
-          Or email me
+          {homepage.finalCta.secondary.label}
         </a>
       </div>
     </div>

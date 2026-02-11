@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "subheadline": "Websites, analytics, email, automation — so it actually works.",
+    "cta": { "label": "Let's talk", "href": "/contact" }
+  },
+  "problems": {
+    "heading": "Sound familiar?",
+    "items": [
+      "Your website exists but doesn't bring in leads",
+      "You've got tools but they don't talk to each other",
+      "Marketing feels like guesswork",
+      "You're doing the same tasks over and over",
+      "You've been burned by \"tech people\" before",
+      "You know you should be doing more but don't know where to start"
+    ],
+    "closing": "You don't need more tools. You need the right setup — and someone to help you get there."
+  },
+  "services": {
+    "heading": "Here's how I can help",
+    "cta": { "label": "See all services", "href": "/services" }
+  },
+  "proof": {
+    "heading": "Real results, not just promises",
+    "stats": [
+      { "value": "£139,700", "label": "Annual value delivered to a recruitment firm" },
+      { "value": "77%", "label": "Time saved on manual tasks" },
+      { "value": "Weeks", "label": "Typical website delivery, not months" }
+    ],
+    "testimonial": {
+      "quote": "MP actually listened to what we needed, not just sold us what he wanted to build.",
+      "attribution": "— Specialist recruitment firm"
+    },
+    "cta": { "label": "See the work", "href": "/work" }
+  },
+  "process": {
+    "heading": "No surprises",
+    "steps": [
+      { "number": 1, "title": "We talk", "description": "I learn about your business, you learn if I can help" },
+      { "number": 2, "title": "Discovery", "description": "I dig into what's actually going on (not what you think is going on)" },
+      { "number": 3, "title": "Recommendation", "description": "Clear options, honest about what's worth doing" },
+      { "number": 4, "title": "Build", "description": "I do the work, you stay in the loop" },
+      { "number": 5, "title": "Handover", "description": "You understand what you've got and how to use it" }
+    ],
+    "closing": "I'll tell you if something's not worth doing. I'd rather do less, well."
+  },
+  "about": {
+    "heading": "Who's MP?",
+    "paragraphs": [
+      "I'm a tech consultant based in Surrey, working with small businesses across the UK. I've spent years in enterprise tech — now I help smaller teams get the same results without the complexity (or the price tag).",
+      "I use modern tools (including AI) to work faster and smarter. That means quicker turnaround and better value for you."
+    ],
+    "cta": { "label": "More about me", "href": "/about" }
+  },
+  "finalCta": {
+    "heading": "Let's figure out what you actually need",
+    "subheading": "No pitch, no pressure. Just a conversation about where you're stuck and whether I can help.",
+    "primary": { "label": "Book a call", "href": "/contact" },
+    "secondary": { "label": "Or email me" }
+  }
+}
