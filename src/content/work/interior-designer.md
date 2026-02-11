@@ -1,5 +1,5 @@
 ---
-title: "Website & Local Lead Generation"
+title: "Website & Local Visibility"
 client: "Interior design studio"
 industry: "Creative Services"
 services:
@@ -7,7 +7,7 @@ services:
   - SEO & Content
 stats:
   - value: "4 weeks"
-    label: "From brief to launch"
+    label: "Brief to launch"
   - value: "Local"
     label: "Search visibility achieved"
   - value: "Qualified"
@@ -16,24 +16,18 @@ featured: true
 order: 3
 ---
 
-## The challenge
+## The problem
 
-An interior design studio had a beautiful portfolio but a website that wasn't doing it justice. It was slow, hard to update, and invisible on Google. They were relying entirely on word-of-mouth and Instagram for new business.
+A design studio had great work but a website that didn't show it. Slow, hard to update, invisible on Google. All new business came from word-of-mouth and Instagram.
 
-## What we did
+## What I did
 
-- Built a fast, modern website that showcased their work properly
-- Made it easy for them to add new projects without developer help
-- Implemented local SEO so they'd appear for searches in their area
-- Set up simple analytics to track where enquiries came from
-- Created a Google Business Profile strategy
+Built a fast, modern site that showcases their portfolio properly. Set up local SEO so they appear when people search for designers in their area. Made it easy for them to add new projects without calling a developer.
 
 ## The result
 
-The new site launched in four weeks - not the six months they'd been quoted elsewhere. It loads fast, looks great on mobile (where most of their audience browses), and they can update it themselves.
-
-More importantly, they're now appearing in local searches. Qualified leads started coming through organic search within weeks of launch - people actively looking for interior designers in their area.
+Launched in four weeks — not the six months they'd been quoted elsewhere. They're now on Google for local searches, getting qualified leads from people actively looking for designers. And they can update the site themselves.
 
 ## What the client said
 
-> "Finally, a website that matches the quality of our work. And I can actually update it myself without breaking anything."
+> "Finally, a website that matches the quality of our work. And I can actually update it myself."

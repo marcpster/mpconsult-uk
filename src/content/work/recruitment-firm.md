@@ -1,39 +1,33 @@
 ---
-title: "Recruitment CRM & Automation"
-client: "Specialist recruitment firm"
+title: "Outreach & Automation Overhaul"
+client: "SearcHive"
 industry: "Recruitment"
 services:
   - Automation
   - Analytics
 stats:
-  - value: "£139,700"
-    label: "Annual value delivered"
-  - value: "77%"
-    label: "Time reduction on manual tasks"
-  - value: "35 → 8 hrs"
-    label: "Monthly admin time"
+  - value: "35 hrs"
+    label: "Monthly admin before"
+  - value: "6 → 3"
+    label: "Tools consolidated"
+  - value: "PoC"
+    label: "Live and being validated"
 featured: true
 order: 1
 ---
 
-## The challenge
+## The problem
 
-A specialist recruitment firm was drowning in manual processes. Their consultants were spending more time on admin than actually placing candidates. Data lived in spreadsheets, emails, and people's heads. Nothing talked to anything else.
+SearcHive's team were spending 35 hours a month on manual outreach admin. Six different tools, none of them talking to each other. Contacts scattered across spreadsheets and LinkedIn. Email deliverability was suffering because the basics — SPF, DKIM, DMARC — weren't set up properly.
 
-## What we did
+## What I did
 
-- Mapped out every manual touchpoint in their recruitment workflow
-- Identified the biggest time drains (candidate tracking was brutal)
-- Built automated workflows connecting their ATS, email, and reporting
-- Created dashboards so they could see pipeline health at a glance
-- Documented everything so the team could maintain it
+Mapped every step of their outreach workflow to find where time was being lost. Designed a streamlined stack — Clay for enrichment, SmartLead for cold email, HubSpot for warm pipeline — replacing six disconnected tools with three that actually work together. Fixed their email infrastructure so messages land in inboxes, not spam.
 
 ## The result
 
-The numbers speak for themselves: a 77% reduction in time spent on manual tasks. What used to take 35 hours a month now takes 8. That's not just efficiency - it's giving consultants their time back to do what they're actually good at.
-
-The £139,700 annual value? That's a combination of time saved, better candidate matching, and fewer dropped balls in the process.
+SearcHive now have a clear, tested architecture that cuts out the manual busywork. The proof of concept is live and being validated with real campaigns. Early signs are strong — the team can focus on placing candidates instead of wrangling spreadsheets.
 
 ## What the client said
 
-> "We knew we were inefficient, but we didn't realise how much until MP showed us the numbers. The automation has transformed how we work."
+> "MP actually listened to what we needed, not just sold us what he wanted to build."

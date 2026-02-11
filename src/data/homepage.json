@@ -22,13 +22,13 @@
   "proof": {
     "heading": "Real results, not just promises",
     "stats": [
-      { "value": "£139,700", "label": "Annual value delivered to a recruitment firm" },
-      { "value": "77%", "label": "Time saved on manual tasks" },
-      { "value": "Weeks", "label": "Typical website delivery, not months" }
+      { "value": "3x", "label": "Qualified enquiries for a financial advisor" },
+      { "value": "35 hrs", "label": "Monthly admin cut from a recruitment workflow" },
+      { "value": "4 weeks", "label": "Website delivered, not months" }
     ],
     "testimonial": {
       "quote": "MP actually listened to what we needed, not just sold us what he wanted to build.",
-      "attribution": "— Specialist recruitment firm"
+      "attribution": "— SearcHive"
     },
     "cta": { "label": "See the work", "href": "/work" }
   },
