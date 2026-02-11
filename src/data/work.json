@@ -13,5 +13,11 @@
     "description": "Every project starts with a conversation about what you're trying to achieve.",
     "label": "Let's talk",
     "href": "/contact"
+  },
+  "detailCta": {
+    "heading": "Want similar results?",
+    "description": "Let's talk about what's possible for your business.",
+    "label": "Get in touch",
+    "href": "/contact"
   }
 }

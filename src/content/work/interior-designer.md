@@ -12,6 +12,9 @@ stats:
     label: "Search visibility achieved"
   - value: "Qualified"
     label: "Leads from organic search"
+testimonial:
+  quote: "Finally, a website that matches the quality of our work. And I can actually update it myself."
+  attribution: "Interior design studio"
 featured: true
 order: 3
 ---
@@ -27,7 +30,3 @@ Built a fast, modern site that showcases their portfolio properly. Set up local 
 ## The result
 
 Launched in four weeks — not the six months they'd been quoted elsewhere. They're now on Google for local searches, getting qualified leads from people actively looking for designers. And they can update the site themselves.
-
-## What the client said
-
-> "Finally, a website that matches the quality of our work. And I can actually update it myself."

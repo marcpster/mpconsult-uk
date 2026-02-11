@@ -29,6 +29,10 @@ const work = defineCollection({
       value: z.string(),
       label: z.string(),
     })),
+    testimonial: z.object({
+      quote: z.string(),
+      attribution: z.string(),
+    }).optional(),
     featured: z.boolean().default(false),
     order: z.number().default(0),
   }),

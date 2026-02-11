@@ -12,6 +12,9 @@ stats:
     label: "Qualified enquiries"
   - value: "Clear"
     label: "Attribution for every lead"
+testimonial:
+  quote: "I used to just hope my marketing was working. Now I know exactly what's driving business."
+  attribution: "Independent financial advisor"
 featured: true
 order: 2
 ---
@@ -27,7 +30,3 @@ Ripped out the broken analytics, set up proper conversion tracking, and built a 
 ## The result
 
 They could finally see what was working — and cut what wasn't. Page 1 rankings for key local terms. Qualified enquiries tripled within six months.
-
-## What the client said
-
-> "I used to just hope my marketing was working. Now I know exactly what's driving business."

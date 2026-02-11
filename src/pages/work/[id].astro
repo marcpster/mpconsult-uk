@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection, render } from 'astro:content';
+import work from '../../data/work.json';
 
 export async function getStaticPaths() {
   const work = await getCollection('work');
@@ -47,19 +48,30 @@ const { Content } = await render(study);
         <Content />
       </div>
 
+      {study.data.testimonial && (
+        <blockquote class="my-12 py-8 px-8 border-l-4 border-accent-500 bg-neutral-100 dark:bg-neutral-900 rounded-r-xl">
+          <p class="text-xl md:text-2xl font-medium text-neutral-800 dark:text-neutral-200 leading-relaxed mb-4">
+            "{study.data.testimonial.quote}"
+          </p>
+          <cite class="text-sm font-medium text-accent-600 dark:text-accent-400 not-italic">
+            — {study.data.testimonial.attribution}
+          </cite>
+        </blockquote>
+      )}
+
       <!-- CTA -->
       <div class="mt-12 pt-12 border-t border-neutral-200 dark:border-neutral-800">
         <h2 class="text-2xl font-semibold text-neutral-900 dark:text-neutral-100 mb-4">
-          Want similar results?
+          {work.detailCta.heading}
         </h2>
         <p class="text-neutral-600 dark:text-neutral-400 mb-6">
-          Let's talk about what's possible for your business.
+          {work.detailCta.description}
         </p>
         <a
-          href="/contact"
+          href={work.detailCta.href}
           class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg bg-accent-600 text-white hover:bg-accent-700 transition-colors"
         >
-          Get in touch
+          {work.detailCta.label}
         </a>
       </div>
     </div>

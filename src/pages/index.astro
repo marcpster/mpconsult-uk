@@ -99,14 +99,16 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
           <StatCard value={stat.value} label={stat.label} />
         ))}
       </div>
-      <blockquote class="max-w-2xl mx-auto text-center">
-        <p class="text-lg italic text-neutral-700 dark:text-neutral-300 mb-4">
-          "{homepage.proof.testimonial.quote}"
-        </p>
-        <cite class="text-sm text-neutral-500 dark:text-neutral-500 not-italic">
-          {homepage.proof.testimonial.attribution}
-        </cite>
-      </blockquote>
+      {homepage.proof.testimonial && (
+        <blockquote class="max-w-2xl mx-auto py-8 px-8 border-l-4 border-accent-500 bg-white dark:bg-neutral-800 rounded-r-xl">
+          <p class="text-xl md:text-2xl font-medium text-neutral-800 dark:text-neutral-200 leading-relaxed mb-4">
+            "{homepage.proof.testimonial.quote}"
+          </p>
+          <cite class="text-sm font-medium text-accent-600 dark:text-accent-400 not-italic">
+            — {homepage.proof.testimonial.attribution}
+          </cite>
+        </blockquote>
+      )}
       <div class="mt-8 text-center">
         <a
           href={homepage.proof.cta.href}

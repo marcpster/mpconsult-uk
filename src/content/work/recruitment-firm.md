@@ -12,6 +12,9 @@ stats:
     label: "Tools consolidated"
   - value: "PoC"
     label: "Live and being validated"
+testimonial:
+  quote: "MP actually listened to what we needed, not just sold us what he wanted to build."
+  attribution: "SearcHive"
 featured: true
 order: 1
 ---
@@ -27,7 +30,3 @@ Mapped every step of their outreach workflow to find where time was being lost. 
 ## The result
 
 SearcHive now have a clear, tested architecture that cuts out the manual busywork. The proof of concept is live and being validated with real campaigns. Early signs are strong — the team can focus on placing candidates instead of wrangling spreadsheets.
-
-## What the client said
-
-> "MP actually listened to what we needed, not just sold us what he wanted to build."
