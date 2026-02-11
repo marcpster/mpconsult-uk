@@ -1,16 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import site from '../data/site.json';
+import contact from '../data/contact.json';
 ---
 
-<BaseLayout title="Contact" description="Get in touch to discuss your tech and marketing needs.">
+<BaseLayout title={contact.meta.title} description={contact.meta.description}>
   <section class="py-16 md:py-24">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <h1 class="text-neutral-900 dark:text-neutral-100 mb-4">
-        Let's talk
+        {contact.header.heading}
       </h1>
       <p class="text-xl text-neutral-600 dark:text-neutral-400 mb-12">
-        No pitch, no pressure. Just a conversation about where you're stuck and whether I can help.
+        {contact.header.subtitle}
       </p>
 
       <div class="grid md:grid-cols-2 gap-12">
@@ -18,25 +19,25 @@ import site from '../data/site.json';
         <div class="space-y-8">
           <div>
             <h2 class="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
-              Book a call
+              {contact.options.call.heading}
             </h2>
             <p class="text-neutral-600 dark:text-neutral-400 mb-4">
-              30 minutes to discuss what you're trying to achieve. Free, no obligation.
+              {contact.options.call.description}
             </p>
             <a
-              href="#"
+              href={contact.options.call.href}
               class="inline-flex items-center px-5 py-2.5 text-sm font-medium rounded-lg bg-accent-600 text-white hover:bg-accent-700 transition-colors"
             >
-              Schedule a time
+              {contact.options.call.label}
             </a>
           </div>
 
           <div>
             <h2 class="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
-              Email
+              {contact.options.email.heading}
             </h2>
             <p class="text-neutral-600 dark:text-neutral-400 mb-2">
-              Prefer to write? I'll get back to you within a day.
+              {contact.options.email.description}
             </p>
             <a
               href={`mailto:${site.email}`}
@@ -48,10 +49,10 @@ import site from '../data/site.json';
 
           <div>
             <h2 class="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
-              LinkedIn
+              {contact.options.linkedin.heading}
             </h2>
             <p class="text-neutral-600 dark:text-neutral-400 mb-2">
-              Connect or send a message.
+              {contact.options.linkedin.description}
             </p>
             <a
               href={site.social.linkedin}
@@ -59,7 +60,7 @@ import site from '../data/site.json';
               rel="noopener noreferrer"
               class="text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300"
             >
-              View profile
+              {contact.options.linkedin.label}
             </a>
           </div>
 
@@ -79,7 +80,7 @@ import site from '../data/site.json';
           >
             <div>
               <label for="name" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
-                Name
+                {contact.form.fields.name}
               </label>
               <input
                 type="text"
@@ -92,7 +93,7 @@ import site from '../data/site.json';
 
             <div>
               <label for="email" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
-                Email
+                {contact.form.fields.email}
               </label>
               <input
                 type="email"
@@ -105,7 +106,7 @@ import site from '../data/site.json';
 
             <div>
               <label for="message" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
-                What can I help with?
+                {contact.form.fields.message}
               </label>
               <textarea
                 name="message"
@@ -120,11 +121,11 @@ import site from '../data/site.json';
               type="submit"
               class="w-full px-6 py-3 text-base font-medium rounded-lg bg-accent-600 text-white hover:bg-accent-700 transition-colors"
             >
-              Send message
+              {contact.form.submit}
             </button>
           </form>
           <p class="mt-4 text-xs text-neutral-500 dark:text-neutral-400">
-            Your information won't be shared with anyone else.
+            {contact.form.privacy}
           </p>
         </div>
       </div>

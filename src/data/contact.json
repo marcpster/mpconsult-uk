@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "title": "Contact",
+    "description": "Get in touch to discuss your tech and marketing needs."
+  },
+  "header": {
+    "heading": "Let's talk",
+    "subtitle": "No pitch, no pressure. Just a conversation about where you're stuck and whether I can help."
+  },
+  "options": {
+    "call": {
+      "heading": "Book a call",
+      "description": "30 minutes to discuss what you're trying to achieve. Free, no obligation.",
+      "label": "Schedule a time",
+      "href": "#"
+    },
+    "email": {
+      "heading": "Email",
+      "description": "Prefer to write? I'll get back to you within a day."
+    },
+    "linkedin": {
+      "heading": "LinkedIn",
+      "description": "Connect or send a message.",
+      "label": "View profile"
+    }
+  },
+  "form": {
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "message": "What can I help with?"
+    },
+    "submit": "Send message",
+    "privacy": "Your information won't be shared with anyone else."
+  },
+  "locationNote": "Based in {location}, working with clients across the UK."
+}
