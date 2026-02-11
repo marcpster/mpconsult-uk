@@ -32,20 +32,22 @@ import contact from '../data/contact.json';
             </a>
           </div>
 
-          <div>
-            <h2 class="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
-              {contact.options.email.heading}
-            </h2>
-            <p class="text-neutral-600 dark:text-neutral-400 mb-2">
-              {contact.options.email.description}
-            </p>
-            <a
-              href={`mailto:${site.email}`}
-              class="text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300"
-            >
-              {site.email}
-            </a>
-          </div>
+          {site.email && (
+            <div>
+              <h2 class="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
+                {contact.options.email.heading}
+              </h2>
+              <p class="text-neutral-600 dark:text-neutral-400 mb-2">
+                {contact.options.email.description}
+              </p>
+              <a
+                href={`mailto:${site.email}`}
+                class="text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300"
+              >
+                {site.email}
+              </a>
+            </div>
+          )}
 
           <div>
             <h2 class="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
