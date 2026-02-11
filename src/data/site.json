@@ -14,8 +14,8 @@
     "linkedin": "https://linkedin.com/in/marcpower"
   },
   "nav": [
-    { "label": "Services", "href": "/services" },
-    { "label": "Work", "href": "/work" },
-    { "label": "About", "href": "/about" }
+    { "label": "What I Do", "href": "/services" },
+    { "label": "What I've Done", "href": "/work" },
+    { "label": "About Me", "href": "/about" }
   ]
 }
