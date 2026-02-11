@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import privacy from '../data/privacy.json';
+---
+
+<BaseLayout title={privacy.meta.title} description={privacy.meta.description}>
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-neutral-900 dark:text-neutral-100 mb-4">
+        {privacy.header.heading}
+      </h1>
+      <p class="text-xl text-neutral-600 dark:text-neutral-400 mb-12">
+        {privacy.header.subtitle}
+      </p>
+
+      <div class="prose prose-neutral dark:prose-invert max-w-none">
+        {privacy.sections.map((section) => (
+          <Fragment>
+            <h2>{section.heading}</h2>
+            {section.paragraphs.map((para) => (
+              <p>{para}</p>
+            ))}
+          </Fragment>
+        ))}
+      </div>
+
+      <p class="mt-12 text-sm text-neutral-500 dark:text-neutral-400">
+        Last updated: {privacy.lastUpdated}
+      </p>
+    </div>
+  </section>
+</BaseLayout>

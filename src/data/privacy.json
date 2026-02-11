@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "title": "Privacy",
+    "description": "How MP Consulting handles your data — kept simple because there's not much to say."
+  },
+  "header": {
+    "heading": "Privacy",
+    "subtitle": "How I handle your data. Kept simple because there's not much to say."
+  },
+  "sections": [
+    {
+      "heading": "The short version",
+      "paragraphs": [
+        "I don't track you with cookies. I don't sell your data. I don't share your information with anyone unless you ask me to."
+      ]
+    },
+    {
+      "heading": "Analytics",
+      "paragraphs": [
+        "This site uses Cloudflare Web Analytics to understand which pages are visited and where traffic comes from. It doesn't use cookies, doesn't collect personal data, and doesn't track you across sites. It just counts page views."
+      ]
+    },
+    {
+      "heading": "Contact form",
+      "paragraphs": [
+        "If you get in touch via the contact form, I receive your name, email address, and message. I use this only to reply to you. Your details aren't added to any mailing list or shared with third parties."
+      ]
+    },
+    {
+      "heading": "Email",
+      "paragraphs": [
+        "If you email me directly, standard email applies. I won't add you to any marketing list without your permission."
+      ]
+    },
+    {
+      "heading": "Your rights",
+      "paragraphs": [
+        "You can ask me to delete any data I hold about you at any time. Just email hello@mpconsult.uk."
+      ]
+    },
+    {
+      "heading": "Who's responsible",
+      "paragraphs": [
+        "MP Consulting is a trading name of Morfology Ltd, registered in England. If you have questions about how your data is handled, email hello@mpconsult.uk."
+      ]
+    }
+  ],
+  "lastUpdated": "2026-02-11"
+}

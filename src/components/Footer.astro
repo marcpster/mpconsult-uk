@@ -45,10 +45,16 @@ const currentYear = new Date().getFullYear();
     </div>
 
     <!-- Legal -->
-    <div class="mt-8 pt-8 border-t border-neutral-200 dark:border-neutral-800">
+    <div class="mt-8 pt-8 border-t border-neutral-200 dark:border-neutral-800 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
       <p class="text-xs text-neutral-500 dark:text-neutral-500">
         &copy; {currentYear} {site.name}. {site.legal.note}
       </p>
+      <a
+        href="/privacy"
+        class="text-xs text-neutral-500 hover:text-accent-600 dark:text-neutral-500 dark:hover:text-accent-400 transition-colors"
+      >
+        Privacy
+      </a>
     </div>
   </div>
 </footer>
