@@ -1,10 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection, render } from 'astro:content';
+import services from '../../data/services.json';
 
 export async function getStaticPaths() {
-  const services = await getCollection('services');
-  return services.map((service) => ({
+  const items = await getCollection('services');
+  return items.map((service) => ({
     params: { id: service.id },
     props: { service },
   }));
@@ -19,7 +20,7 @@ const { Content } = await render(service);
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Header -->
       <header class="mb-12">
-        <p class="text-accent-600 dark:text-accent-400 font-medium mb-2">Service</p>
+        <p class="text-accent-600 dark:text-accent-400 font-medium mb-2">{services.detail.breadcrumb}</p>
         <h1 class="text-neutral-900 dark:text-neutral-100 mb-4">
           {service.data.title}
         </h1>
@@ -31,7 +32,7 @@ const { Content } = await render(service);
       <!-- Features -->
       {service.data.features && (
         <div class="mb-12 p-6 rounded-xl bg-neutral-100 dark:bg-neutral-900">
-          <h2 class="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-4">What you get</h2>
+          <h2 class="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-4">{services.detail.featuresHeading}</h2>
           <ul class="space-y-2">
             {service.data.features.map((feature: string) => (
               <li class="flex items-start gap-3">
@@ -53,7 +54,7 @@ const { Content } = await render(service);
       <!-- Proof -->
       {service.data.proof && (
         <div class="mt-12 p-6 rounded-xl border border-neutral-200 dark:border-neutral-800">
-          <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-1">Recent result</p>
+          <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-1">{services.detail.proofLabel}</p>
           <p class="font-medium text-neutral-900 dark:text-neutral-100">{service.data.proof.client}</p>
           <p class="text-accent-600 dark:text-accent-400">{service.data.proof.result}</p>
         </div>
@@ -62,16 +63,16 @@ const { Content } = await render(service);
       <!-- CTA -->
       <div class="mt-12 pt-12 border-t border-neutral-200 dark:border-neutral-800">
         <h2 class="text-2xl font-semibold text-neutral-900 dark:text-neutral-100 mb-4">
-          Interested?
+          {services.detail.cta.heading}
         </h2>
         <p class="text-neutral-600 dark:text-neutral-400 mb-6">
-          Let's talk about whether this is right for you.
+          {services.detail.cta.description}
         </p>
         <a
-          href="/contact"
+          href={services.detail.cta.href}
           class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg bg-accent-600 text-white hover:bg-accent-700 transition-colors"
         >
-          Get in touch
+          {services.detail.cta.label}
         </a>
       </div>
     </div>
