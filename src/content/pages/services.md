@@ -1,11 +1,11 @@
 ---
 title: Services
-description: "Tech and marketing services for small businesses. Websites, SEO, email, analytics, and automation."
+description: "Tech and marketing services for small businesses. Websites, SEO, email, analytics, automation, and the integrations that tie them together."
 heading: Services
-subtitle: "No overlapping categories. Each service is a clear answer to \"what do you actually do?\""
+subtitle: "Five services. No overlapping categories. Each one is a clear answer to \"what do you actually do?\""
 cta:
   heading: "Not sure what you need?"
-  description: "Let's have a conversation. I'll tell you honestly what's worth doing — and what isn't."
+  description: "Let's have a conversation. I'll tell you honestly what's worth doing, and what isn't."
   label: "Let's talk"
   href: "/contact"
 detail:

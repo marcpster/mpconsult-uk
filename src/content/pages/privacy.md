@@ -1,6 +1,6 @@
 ---
 title: Privacy
-description: "How MP Consulting handles your data — kept simple because there's not much to say."
+description: "How MP Consulting handles your data. Kept simple because there's not much to say."
 heading: Privacy
 subtitle: "How I handle your data. Kept simple because there's not much to say."
 lastUpdated: "2026-02-11"

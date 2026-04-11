@@ -1,8 +1,8 @@
 ---
 title: Home
-description: "Tech and marketing consulting for small businesses."
+description: "Tech and marketing consulting for small businesses. Websites, analytics, automation, and integrations that actually work."
 hero:
-  subheadline: "Websites, analytics, email, automation — so it actually works."
+  subheadline: "Websites, analytics, automation, and integrations. Built to bring you business, not just look the part."
   cta:
     label: "Let's talk"
     href: "/contact"
@@ -10,12 +10,12 @@ problems:
   heading: "Sound familiar?"
   items:
     - "Your website exists but doesn't bring in leads"
-    - "You've got tools but they don't talk to each other"
-    - "Marketing feels like guesswork"
-    - "You're doing the same tasks over and over"
-    - "You've been burned by \"tech people\" before"
+    - "You've got six tools and none of them talk to each other"
+    - "Marketing spend goes out but you can't see what comes back"
+    - "You're copy-pasting between spreadsheets and inboxes every week"
+    - "You've been burned by agencies or \"tech people\" before"
     - "You know you should be doing more but don't know where to start"
-  closing: "You don't need more tools. You need the right setup — and someone to help you get there."
+  closing: "You don't need more tools. You need the right ones wired together, and someone who'll tell you what's not worth doing."
 services:
   heading: "Here's how I can help"
   cta:
@@ -24,10 +24,10 @@ services:
 proof:
   heading: "Real results, not just promises"
   stats:
+    - value: "£140k"
+      label: "Annual value created for a recruitment firm"
     - value: "3x"
       label: "Qualified enquiries for a financial advisor"
-    - value: "35 hrs"
-      label: "Monthly admin cut from a recruitment workflow"
     - value: "4 weeks"
       label: "Website delivered, not months"
   testimonial:
@@ -44,22 +44,22 @@ process:
       description: "I learn about your business, you learn if I can help"
     - number: 2
       title: "Discovery"
-      description: "I dig into what's actually going on (not what you think is going on)"
+      description: "I dig into what's actually going on. The tools, the workflows, the gaps"
     - number: 3
       title: "Recommendation"
-      description: "Clear options, honest about what's worth doing"
+      description: "Clear options with honest trade-offs. I'll tell you what's not worth doing"
     - number: 4
       title: "Build"
-      description: "I do the work, you stay in the loop"
+      description: "I do the work, you stay in the loop. No vanishing acts"
     - number: 5
       title: "Handover"
-      description: "You understand what you've got and how to use it"
-  closing: "I'll tell you if something's not worth doing. I'd rather do less, well."
+      description: "You own it, you understand it, and you can run it without me"
+  closing: "I'd rather do less, well, and leave you with something that actually lasts."
 about:
   heading: "Who's MP?"
   paragraphs:
-    - "I'm a tech consultant based in Surrey, working with small businesses across the UK. I've spent years in enterprise tech — now I help smaller teams get the same results without the complexity (or the price tag)."
-    - "I use modern tools (including AI) to work faster and smarter. That means quicker turnaround and better value for you."
+    - "I'm a tech consultant based in Surrey, working with small businesses across the UK. I've spent years building data pipelines, managing platforms, and running technical projects for companies like Docker and 75,000-member developer communities. Now I bring that same rigour to smaller teams, without the complexity or the price tag."
+    - "I use modern tools (including AI) to work faster and smarter. That means quicker turnaround, better value, and solutions built on foundations that scale."
   cta:
     label: "More about me"
     href: "/about"
