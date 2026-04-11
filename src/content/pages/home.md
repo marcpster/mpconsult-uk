@@ -1,6 +1,6 @@
 ---
 title: Home
-description: "Tech and marketing consulting for small businesses. Websites, analytics, automation, and integrations that actually work."
+description: "Tech consulting for small businesses and startups. Websites, analytics, automation, and integrations that actually work."
 hero:
   subheadline: "Websites, analytics, automation, and integrations. Built to bring you business, not just look the part."
   cta:

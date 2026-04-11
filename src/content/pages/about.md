@@ -2,7 +2,7 @@
 title: About
 description: "Meet MP. Tech consultant helping small businesses and startups get real results without the overhead."
 heading: "Hi, I'm MP"
-subtitle: "I help small businesses and startups sort out their tech and marketing, so it actually works."
+subtitle: "I help small businesses and startups sort out their tech stack, so it actually works."
 cta:
   heading: "Want to work together?"
   description: "Let's have a conversation. No pitch, no pressure, just a chat about what you're trying to achieve."

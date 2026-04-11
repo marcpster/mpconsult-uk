@@ -41,28 +41,8 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
     </div>
   </section>
 
-  <!-- Problem Section -->
-  <section class="py-16 md:py-24 bg-neutral-100 dark:bg-neutral-900">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-neutral-900 dark:text-neutral-100 mb-8">
-        {page.data.problems.heading}
-      </h2>
-      <ul class="grid md:grid-cols-2 gap-4 mb-8">
-        {page.data.problems.items.map((item: string) => (
-          <li class="flex items-start gap-3">
-            <span class="text-accent-500 mt-1">—</span>
-            <span class="text-neutral-700 dark:text-neutral-300">{item}</span>
-          </li>
-        ))}
-      </ul>
-      <p class="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl">
-        {page.data.problems.closing}
-      </p>
-    </div>
-  </section>
-
   <!-- Services Section -->
-  <section class="py-16 md:py-24">
+  <section class="py-16 md:py-24 bg-neutral-100 dark:bg-neutral-900">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-neutral-900 dark:text-neutral-100 mb-8">
         {page.data.services.heading}

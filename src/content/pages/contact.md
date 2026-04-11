@@ -1,6 +1,6 @@
 ---
 title: Contact
-description: "Get in touch to discuss your tech and marketing needs."
+description: "Get in touch to discuss your tech needs."
 heading: "Let's talk"
 subtitle: "No pitch, no pressure. Just a conversation about where you're stuck and whether I can help."
 options:
