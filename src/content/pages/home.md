@@ -6,16 +6,6 @@ hero:
   cta:
     label: "Let's talk"
     href: "/contact"
-problems:
-  heading: "Sound familiar?"
-  items:
-    - "Your website exists but doesn't bring in leads"
-    - "You've got six tools and none of them talk to each other"
-    - "Marketing spend goes out but you can't see what comes back"
-    - "You're copy-pasting between spreadsheets and inboxes every week"
-    - "You've been burned by agencies or \"tech people\" before"
-    - "You know you should be doing more but don't know where to start"
-  closing: "You don't need more tools. You need the right ones wired together, and someone who'll tell you what's not worth doing."
 services:
   heading: "Here's how I can help"
   cta:

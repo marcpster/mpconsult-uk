@@ -1,8 +1,8 @@
 ---
 title: About
-description: "Meet MP. Tech consultant who's built data warehouses, managed developer platforms, and now helps small businesses get the same results without the overhead."
+description: "Meet MP. Tech consultant helping small businesses and startups get real results without the overhead."
 heading: "Hi, I'm MP"
-subtitle: "I help small businesses sort out their tech and marketing, so it actually works for them."
+subtitle: "I help small businesses and startups sort out their tech and marketing, so it actually works."
 cta:
   heading: "Want to work together?"
   description: "Let's have a conversation. No pitch, no pressure, just a chat about what you're trying to achieve."
@@ -12,7 +12,7 @@ cta:
 
 ## The short version
 
-I'm a tech consultant based in Surrey, working with small businesses across the UK. My background is in data engineering, platform management, and technical project delivery. Now I bring that same rigour to smaller teams, without the complexity or the price tag.
+I'm a tech consultant based in Surrey. My background is in data engineering, platform management, and technical project delivery. I work with small businesses in the UK and startups further afield, bringing the same rigour to smaller teams without the complexity or the price tag.
 
 ## My approach
 
