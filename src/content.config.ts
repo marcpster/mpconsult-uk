@@ -50,4 +50,13 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { services, work, blog };
+// Pages collection - singleton page content (about, contact, home, etc.)
+const pages = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/pages' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+  }).passthrough(),
+});
+
+export const collections = { services, work, blog, pages };

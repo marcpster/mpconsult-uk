@@ -1,17 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import site from '../data/site.json';
-import contact from '../data/contact.json';
+import { getEntry } from 'astro:content';
+
+const page = await getEntry('pages', 'contact');
 ---
 
-<BaseLayout title={contact.meta.title} description={contact.meta.description}>
+<BaseLayout title={page.data.title} description={page.data.description}>
   <section class="py-16 md:py-24">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <h1 class="text-neutral-900 dark:text-neutral-100 mb-4">
-        {contact.header.heading}
+        {page.data.heading}
       </h1>
       <p class="text-xl text-neutral-600 dark:text-neutral-400 mb-12">
-        {contact.header.subtitle}
+        {page.data.subtitle}
       </p>
 
       <div class="grid md:grid-cols-2 gap-12">
@@ -19,26 +21,26 @@ import contact from '../data/contact.json';
         <div class="space-y-8">
           <div>
             <h2 class="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
-              {contact.options.call.heading}
+              {page.data.options.call.heading}
             </h2>
             <p class="text-neutral-600 dark:text-neutral-400 mb-4">
-              {contact.options.call.description}
+              {page.data.options.call.description}
             </p>
             <a
-              href={contact.options.call.href}
+              href={page.data.options.call.href}
               class="inline-flex items-center px-5 py-2.5 text-sm font-medium rounded-lg bg-accent-600 text-white hover:bg-accent-700 transition-colors"
             >
-              {contact.options.call.label}
+              {page.data.options.call.label}
             </a>
           </div>
 
           {site.email && (
             <div>
               <h2 class="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
-                {contact.options.email.heading}
+                {page.data.options.email.heading}
               </h2>
               <p class="text-neutral-600 dark:text-neutral-400 mb-2">
-                {contact.options.email.description}
+                {page.data.options.email.description}
               </p>
               <a
                 href={`mailto:${site.email}`}
@@ -51,10 +53,10 @@ import contact from '../data/contact.json';
 
           <div>
             <h2 class="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
-              {contact.options.linkedin.heading}
+              {page.data.options.linkedin.heading}
             </h2>
             <p class="text-neutral-600 dark:text-neutral-400 mb-2">
-              {contact.options.linkedin.description}
+              {page.data.options.linkedin.description}
             </p>
             <a
               href={site.social.linkedin}
@@ -62,7 +64,7 @@ import contact from '../data/contact.json';
               rel="noopener noreferrer"
               class="text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300"
             >
-              {contact.options.linkedin.label}
+              {page.data.options.linkedin.label}
             </a>
           </div>
 
@@ -82,7 +84,7 @@ import contact from '../data/contact.json';
           >
             <div>
               <label for="name" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
-                {contact.form.fields.name}
+                {page.data.form.fields.name}
               </label>
               <input
                 type="text"
@@ -95,7 +97,7 @@ import contact from '../data/contact.json';
 
             <div>
               <label for="email" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
-                {contact.form.fields.email}
+                {page.data.form.fields.email}
               </label>
               <input
                 type="email"
@@ -108,7 +110,7 @@ import contact from '../data/contact.json';
 
             <div>
               <label for="message" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
-                {contact.form.fields.message}
+                {page.data.form.fields.message}
               </label>
               <textarea
                 name="message"
@@ -123,11 +125,11 @@ import contact from '../data/contact.json';
               type="submit"
               class="w-full px-6 py-3 text-base font-medium rounded-lg bg-accent-600 text-white hover:bg-accent-700 transition-colors"
             >
-              {contact.form.submit}
+              {page.data.form.submit}
             </button>
           </form>
           <p class="mt-4 text-xs text-neutral-500 dark:text-neutral-400">
-            {contact.form.privacy}
+            {page.data.form.privacy}
           </p>
         </div>
       </div>

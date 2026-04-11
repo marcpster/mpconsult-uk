@@ -1,20 +1,20 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
-import { getCollection } from 'astro:content';
-import services from '../../data/services.json';
+import { getCollection, getEntry } from 'astro:content';
 
+const page = await getEntry('pages', 'services');
 const items = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
 ---
 
-<BaseLayout title={services.meta.title} description={services.meta.description}>
+<BaseLayout title={page.data.title} description={page.data.description}>
   <section class="py-16 md:py-24">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <h1 class="text-neutral-900 dark:text-neutral-100 mb-4">
-        {services.header.heading}
+        {page.data.heading}
       </h1>
       <p class="text-xl text-neutral-600 dark:text-neutral-400 mb-12 max-w-2xl">
-        {services.header.subtitle}
+        {page.data.subtitle}
       </p>
 
       <div class="grid md:grid-cols-2 gap-6">
@@ -33,16 +33,16 @@ const items = (await getCollection('services')).sort((a, b) => a.data.order - b.
   <section class="py-16 md:py-24 bg-neutral-100 dark:bg-neutral-900">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-neutral-900 dark:text-neutral-100 mb-4">
-        {services.cta.heading}
+        {page.data.cta.heading}
       </h2>
       <p class="text-neutral-600 dark:text-neutral-400 mb-8 max-w-xl mx-auto">
-        {services.cta.description}
+        {page.data.cta.description}
       </p>
       <a
-        href={services.cta.href}
+        href={page.data.cta.href}
         class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg bg-accent-600 text-white hover:bg-accent-700 transition-colors"
       >
-        {services.cta.label}
+        {page.data.cta.label}
       </a>
     </div>
   </section>

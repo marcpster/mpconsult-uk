@@ -1,31 +1,27 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import privacy from '../data/privacy.json';
+import { getEntry, render } from 'astro:content';
+
+const page = await getEntry('pages', 'privacy');
+const { Content } = await render(page);
 ---
 
-<BaseLayout title={privacy.meta.title} description={privacy.meta.description}>
+<BaseLayout title={page.data.title} description={page.data.description}>
   <section class="py-16 md:py-24">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <h1 class="text-neutral-900 dark:text-neutral-100 mb-4">
-        {privacy.header.heading}
+        {page.data.heading}
       </h1>
       <p class="text-xl text-neutral-600 dark:text-neutral-400 mb-12">
-        {privacy.header.subtitle}
+        {page.data.subtitle}
       </p>
 
       <div class="prose prose-neutral dark:prose-invert max-w-none">
-        {privacy.sections.map((section) => (
-          <Fragment>
-            <h2>{section.heading}</h2>
-            {section.paragraphs.map((para) => (
-              <p>{para}</p>
-            ))}
-          </Fragment>
-        ))}
+        <Content />
       </div>
 
       <p class="mt-12 text-sm text-neutral-500 dark:text-neutral-400">
-        Last updated: {privacy.lastUpdated}
+        Last updated: {page.data.lastUpdated}
       </p>
     </div>
   </section>

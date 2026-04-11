@@ -1,10 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import site from '../data/site.json';
-import about from '../data/about.json';
+import { getEntry, render } from 'astro:content';
+
+const page = await getEntry('pages', 'about');
+const { Content } = await render(page);
 ---
 
-<BaseLayout title={about.meta.title} description={about.meta.description}>
+<BaseLayout title={page.data.title} description={page.data.description}>
   <section class="py-16 md:py-24">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Header with avatar -->
@@ -17,39 +19,32 @@ import about from '../data/about.json';
         />
         <div>
           <h1 class="text-neutral-900 dark:text-neutral-100 mb-4">
-            {about.header.heading}
+            {page.data.heading}
           </h1>
           <p class="text-xl text-neutral-600 dark:text-neutral-400">
-            {about.header.subtitle}
+            {page.data.subtitle}
           </p>
         </div>
       </div>
 
       <!-- Story -->
       <div class="prose prose-neutral dark:prose-invert max-w-none">
-        {about.sections.map((section) => (
-          <Fragment>
-            <h2>{section.heading}</h2>
-            {section.paragraphs.map((para) => (
-              <p>{para}</p>
-            ))}
-          </Fragment>
-        ))}
+        <Content />
       </div>
 
       <!-- CTA -->
       <div class="mt-12 pt-12 border-t border-neutral-200 dark:border-neutral-800">
         <h2 class="text-2xl font-semibold text-neutral-900 dark:text-neutral-100 mb-4">
-          {about.cta.heading}
+          {page.data.cta.heading}
         </h2>
         <p class="text-neutral-600 dark:text-neutral-400 mb-6">
-          {about.cta.description}
+          {page.data.cta.description}
         </p>
         <a
-          href={about.cta.href}
+          href={page.data.cta.href}
           class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg bg-accent-600 text-white hover:bg-accent-700 transition-colors"
         >
-          {about.cta.label}
+          {page.data.cta.label}
         </a>
       </div>
     </div>
