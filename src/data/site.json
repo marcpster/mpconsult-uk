@@ -1,5 +1,5 @@
 {
-  "name": "MP Consulting",
+  "name": "MP Consult",
   "shortName": "MP",
   "tagline": "I help small businesses sort out their tech and marketing.",
   "description": "Tech and marketing consulting for small businesses. Websites, analytics, email, automation - so it actually works.",
@@ -8,7 +8,7 @@
   "location": "Farnham, Surrey",
   "legal": {
     "company": "Morfology Ltd",
-    "note": "Trading as MP Consulting. Registered in England."
+    "note": "Trading as MP Consult. Registered in England."
   },
   "analytics": {
     "cloudflareToken": ""

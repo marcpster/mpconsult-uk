@@ -1,10 +1,10 @@
-# MP Consulting Website (v2)
+# MP Consult Website (v2)
 
 Personal consultancy website for mpconsult.uk - SMB-focused, Notion-inspired aesthetic.
 
 ## Project Context
 
-- **Brand:** "MP" as shorthand for MP Consulting (Marc Power)
+- **Brand:** "MP" as shorthand for MP Consult (Marc Power)
 - **Audience:** Small service businesses (1-20 people), owner-operators
 - **Tone:** Clear, helpful, confident, British - not corporate, not amateur
 - **Domain:** mpconsult.uk

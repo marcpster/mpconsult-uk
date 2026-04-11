@@ -1,6 +1,6 @@
 ---
 title: Privacy
-description: "How MP Consulting handles your data. Kept simple because there's not much to say."
+description: "How MP Consult handles your data. Kept simple because there's not much to say."
 heading: Privacy
 subtitle: "How I handle your data. Kept simple because there's not much to say."
 lastUpdated: "2026-02-11"
@@ -28,4 +28,4 @@ You can ask me to delete any data I hold about you at any time. Just get in touc
 
 ## Who's responsible
 
-MP Consulting is a trading name of Morfology Ltd, registered in England. If you have questions about how your data is handled, get in touch via the contact page.
+MP Consult is a trading name of Morfology Ltd, registered in England. If you have questions about how your data is handled, get in touch via the contact page.
