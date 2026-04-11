@@ -2,7 +2,7 @@
 title: "Automation"
 tagline: "Stop doing the same thing twice"
 icon: "cog"
-order: 5
+order: 1
 features:
   - Replace six tools with three that talk to each other
   - Eliminate hours of weekly copy-paste admin

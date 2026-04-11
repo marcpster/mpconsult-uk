@@ -2,7 +2,7 @@
 title: "Analytics"
 tagline: "See what's actually working"
 icon: "chart"
-order: 4
+order: 2
 features:
   - Know exactly where your leads come from
   - Dashboards you'll actually look at
