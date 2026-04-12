@@ -15,7 +15,7 @@ stats:
 testimonial:
   quote: "I used to just hope my marketing was working. Now I know exactly what's driving business."
   attribution: "Independent financial advisor"
-featured: true
+featured: false
 order: 2
 ---
 

@@ -15,7 +15,7 @@ stats:
 testimonial:
   quote: "Finally, a website that matches the quality of our work. And I can actually update it myself."
   attribution: "Interior design studio"
-featured: true
+featured: false
 order: 3
 ---
 

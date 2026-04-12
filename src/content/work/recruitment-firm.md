@@ -1,7 +1,7 @@
 ---
 title: "Outreach & Automation Overhaul"
 client: "SearcHive"
-industry: "Recruitment"
+industry: "Recruitment Startup"
 services:
   - Automation
   - Email & Outreach

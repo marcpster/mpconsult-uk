@@ -3,7 +3,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection, getEntry } from 'astro:content';
 
 const page = await getEntry('pages', 'work');
-const studies = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+const studies = (await getCollection('work'))
+  .filter((study) => study.data.featured)
+  .sort((a, b) => a.data.order - b.data.order);
 ---
 
 <BaseLayout title={page.data.title} description={page.data.description}>
