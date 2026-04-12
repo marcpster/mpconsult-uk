@@ -6,45 +6,6 @@ hero:
   cta:
     label: "Let's talk"
     href: "/contact"
-services:
-  heading: "Here's how I can help"
-  cta:
-    label: "See all services"
-    href: "/services"
-proof:
-  heading: "Real results, not just promises"
-  stats:
-    - value: "£140k"
-      label: "Annual value created for a recruitment startup"
-    - value: "3x"
-      label: "Qualified enquiries for a financial advisor"
-    - value: "4 weeks"
-      label: "Website delivered, not months"
-  testimonial:
-    quote: "MP actually listened to what we needed, not just sold us what he wanted to build."
-    attribution: "SearcHive"
-  cta:
-    label: "See the work"
-    href: "/work"
-process:
-  heading: "No surprises"
-  steps:
-    - number: 1
-      title: "We talk"
-      description: "I learn about your business, you learn if I can help"
-    - number: 2
-      title: "Discovery"
-      description: "I dig into what's actually going on. The tools, the workflows, the gaps"
-    - number: 3
-      title: "Recommendation"
-      description: "Clear options with honest trade-offs. I'll tell you what's not worth doing"
-    - number: 4
-      title: "Build"
-      description: "I do the work, you stay in the loop. No vanishing acts"
-    - number: 5
-      title: "Handover"
-      description: "You own it, you understand it, and you can run it without me"
-  closing: "I'd rather do less, well, and leave you with something that actually lasts."
 about:
   heading: "Hi, I'm Marc"
   paragraphs:

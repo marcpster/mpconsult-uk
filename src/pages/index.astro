@@ -42,91 +42,97 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
   </section>
 
   <!-- Services Section -->
-  <section class="py-16 md:py-24 bg-neutral-100 dark:bg-neutral-900">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-neutral-900 dark:text-neutral-100 mb-8">
-        {page.data.services.heading}
-      </h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {services.map((service) => (
-          <ServiceCard
-            title={service.data.title}
-            tagline={service.data.tagline}
-            href={`/services/${service.id}`}
-          />
-        ))}
+  {page.data.services && (
+    <section class="py-16 md:py-24 bg-neutral-100 dark:bg-neutral-900">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-neutral-900 dark:text-neutral-100 mb-8">
+          {page.data.services.heading}
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {services.map((service) => (
+            <ServiceCard
+              title={service.data.title}
+              tagline={service.data.tagline}
+              href={`/services/${service.id}`}
+            />
+          ))}
+        </div>
+        <div class="mt-8">
+          <a
+            href={page.data.services.cta.href}
+            class="inline-flex items-center text-accent-600 dark:text-accent-400 font-medium hover:text-accent-700 dark:hover:text-accent-300"
+          >
+            {page.data.services.cta.label}
+            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
       </div>
-      <div class="mt-8">
-        <a
-          href={page.data.services.cta.href}
-          class="inline-flex items-center text-accent-600 dark:text-accent-400 font-medium hover:text-accent-700 dark:hover:text-accent-300"
-        >
-          {page.data.services.cta.label}
-          <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
+    </section>
+  )}
 
   <!-- Proof Section -->
-  <section class="py-16 md:py-24 bg-neutral-100 dark:bg-neutral-900">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-neutral-900 dark:text-neutral-100 mb-12 text-center">
-        {page.data.proof.heading}
-      </h2>
-      <div class="grid md:grid-cols-3 gap-8 mb-12">
-        {page.data.proof.stats.map((stat: { value: string; label: string }) => (
-          <StatCard value={stat.value} label={stat.label} />
-        ))}
+  {page.data.proof && (
+    <section class="py-16 md:py-24 bg-neutral-100 dark:bg-neutral-900">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-neutral-900 dark:text-neutral-100 mb-12 text-center">
+          {page.data.proof.heading}
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+          {page.data.proof.stats.map((stat: { value: string; label: string }) => (
+            <StatCard value={stat.value} label={stat.label} />
+          ))}
+        </div>
+        {page.data.proof.testimonial && (
+          <blockquote class="max-w-2xl mx-auto py-8 px-8 border-l-4 border-accent-500 bg-white dark:bg-neutral-800 rounded-r-xl">
+            <p class="text-xl md:text-2xl font-medium text-neutral-800 dark:text-neutral-200 leading-relaxed mb-4">
+              "{page.data.proof.testimonial.quote}"
+            </p>
+            <cite class="text-sm font-medium text-accent-600 dark:text-accent-400 not-italic">
+              — {page.data.proof.testimonial.attribution}
+            </cite>
+          </blockquote>
+        )}
+        <div class="mt-8 text-center">
+          <a
+            href={page.data.proof.cta.href}
+            class="inline-flex items-center text-accent-600 dark:text-accent-400 font-medium hover:text-accent-700 dark:hover:text-accent-300"
+          >
+            {page.data.proof.cta.label}
+            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
       </div>
-      {page.data.proof.testimonial && (
-        <blockquote class="max-w-2xl mx-auto py-8 px-8 border-l-4 border-accent-500 bg-white dark:bg-neutral-800 rounded-r-xl">
-          <p class="text-xl md:text-2xl font-medium text-neutral-800 dark:text-neutral-200 leading-relaxed mb-4">
-            "{page.data.proof.testimonial.quote}"
-          </p>
-          <cite class="text-sm font-medium text-accent-600 dark:text-accent-400 not-italic">
-            — {page.data.proof.testimonial.attribution}
-          </cite>
-        </blockquote>
-      )}
-      <div class="mt-8 text-center">
-        <a
-          href={page.data.proof.cta.href}
-          class="inline-flex items-center text-accent-600 dark:text-accent-400 font-medium hover:text-accent-700 dark:hover:text-accent-300"
-        >
-          {page.data.proof.cta.label}
-          <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
+    </section>
+  )}
 
   <!-- How I Work Section -->
-  <section class="py-16 md:py-24">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-neutral-900 dark:text-neutral-100 mb-8">
-        {page.data.process.heading}
-      </h2>
-      <ol class="space-y-6 max-w-2xl">
-        {page.data.process.steps.map((step: { number: number; title: string; description: string }) => (
-          <li class="flex gap-4">
-            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-accent-100 dark:bg-accent-900 text-accent-600 dark:text-accent-400 flex items-center justify-center font-semibold text-sm">{step.number}</span>
-            <div>
-              <h3 class="font-semibold text-neutral-900 dark:text-neutral-100">{step.title}</h3>
-              <p class="text-neutral-600 dark:text-neutral-400">{step.description}</p>
-            </div>
-          </li>
-        ))}
-      </ol>
-      <p class="mt-8 text-neutral-600 dark:text-neutral-400 max-w-2xl">
-        {page.data.process.closing}
-      </p>
-    </div>
-  </section>
+  {page.data.process && (
+    <section class="py-16 md:py-24">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-neutral-900 dark:text-neutral-100 mb-8">
+          {page.data.process.heading}
+        </h2>
+        <ol class="space-y-6 max-w-2xl">
+          {page.data.process.steps.map((step: { number: number; title: string; description: string }) => (
+            <li class="flex gap-4">
+              <span class="flex-shrink-0 w-8 h-8 rounded-full bg-accent-100 dark:bg-accent-900 text-accent-600 dark:text-accent-400 flex items-center justify-center font-semibold text-sm">{step.number}</span>
+              <div>
+                <h3 class="font-semibold text-neutral-900 dark:text-neutral-100">{step.title}</h3>
+                <p class="text-neutral-600 dark:text-neutral-400">{step.description}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+        <p class="mt-8 text-neutral-600 dark:text-neutral-400 max-w-2xl">
+          {page.data.process.closing}
+        </p>
+      </div>
+    </section>
+  )}
 
   <!-- About Teaser Section -->
   <section class="py-16 md:py-24 bg-neutral-100 dark:bg-neutral-900">
