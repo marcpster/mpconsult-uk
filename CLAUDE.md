@@ -57,7 +57,7 @@ Personal consultancy website for mpconsult.uk - SMB-focused, Notion-inspired aes
 
 ## Key Proof Points
 
-- £139,700 annual value (recruitment firm)
+- £139,700 annual value (recruitment startup)
 - 77% time reduction (35 → 8 hours/month)
 - Weeks, not months delivery
 

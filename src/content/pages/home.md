@@ -15,7 +15,7 @@ proof:
   heading: "Real results, not just promises"
   stats:
     - value: "£140k"
-      label: "Annual value created for a recruitment firm"
+      label: "Annual value created for a recruitment startup"
     - value: "3x"
       label: "Qualified enquiries for a financial advisor"
     - value: "4 weeks"
@@ -46,9 +46,9 @@ process:
       description: "You own it, you understand it, and you can run it without me"
   closing: "I'd rather do less, well, and leave you with something that actually lasts."
 about:
-  heading: "Who's MP?"
+  heading: "Hi, I'm Marc"
   paragraphs:
-    - "I'm a tech consultant based in Surrey, working with small businesses across the UK. I've spent years building data pipelines, managing platforms, and running technical projects for companies like Docker and 75,000-member developer communities. Now I bring that same rigour to smaller teams, without the complexity or the price tag."
+    - "I'm a tech consultant based in Surrey, working with small businesses across the UK and startups further afield. I've spent years building data pipelines, managing platforms, and running technical projects for companies like Docker and 75,000-member developer communities. Now I bring that same rigour to smaller teams, without the complexity or the price tag."
     - "I use modern tools (including AI) to work faster and smarter. That means quicker turnaround, better value, and solutions built on foundations that scale."
   cta:
     label: "More about me"

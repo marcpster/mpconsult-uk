@@ -8,7 +8,7 @@ features:
   - Sequences that nurture without nagging
   - Infrastructure that actually delivers
 proof:
-  client: "Recruitment firm"
+  client: "Recruitment startup"
   result: "Email infrastructure rebuilt, sender reputation restored, outreach landing in inboxes instead of spam"
 ---
 
