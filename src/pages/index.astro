@@ -137,32 +137,24 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
   <!-- About Teaser Section -->
   <section class="py-16 md:py-24 bg-neutral-100 dark:bg-neutral-900">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
-        <img
-          src="/avatar.png"
-          alt="MP"
-          class="w-20 h-20 rounded-full bg-neutral-200 dark:bg-neutral-800 flex-shrink-0"
-          onerror="this.style.display='none'"
-        />
-        <div>
-          <h2 class="text-neutral-900 dark:text-neutral-100 mb-4">
-            {page.data.about.heading}
-          </h2>
-          {page.data.about.paragraphs.map((para: string, i: number) => (
-            <p class={`text-neutral-700 dark:text-neutral-300 ${i < page.data.about.paragraphs.length - 1 ? 'mb-4' : 'mb-6'}`}>
-              {para}
-            </p>
-          ))}
-          <a
-            href={page.data.about.cta.href}
-            class="inline-flex items-center text-accent-600 dark:text-accent-400 font-medium hover:text-accent-700 dark:hover:text-accent-300"
-          >
-            {page.data.about.cta.label}
-            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
-        </div>
+      <div class="max-w-2xl">
+        <h2 class="text-neutral-900 dark:text-neutral-100 mb-4">
+          {page.data.about.heading}
+        </h2>
+        {page.data.about.paragraphs.map((para: string, i: number) => (
+          <p class={`text-neutral-700 dark:text-neutral-300 ${i < page.data.about.paragraphs.length - 1 ? 'mb-4' : 'mb-6'}`}>
+            {para}
+          </p>
+        ))}
+        <a
+          href={page.data.about.cta.href}
+          class="inline-flex items-center text-accent-600 dark:text-accent-400 font-medium hover:text-accent-700 dark:hover:text-accent-300"
+        >
+          {page.data.about.cta.label}
+          <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
       </div>
     </div>
   </section>

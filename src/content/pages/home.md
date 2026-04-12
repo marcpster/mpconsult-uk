@@ -9,8 +9,7 @@ hero:
 about:
   heading: "Hi, I'm Marc"
   paragraphs:
-    - "I'm a tech consultant based in Surrey, working with small businesses across the UK and startups further afield. I've spent years building data pipelines, managing platforms, and running technical projects for companies like Docker and 75,000-member developer communities. Now I bring that same rigour to smaller teams, without the complexity or the price tag."
-    - "I use modern tools (including AI) to work faster and smarter. That means quicker turnaround, better value, and solutions built on foundations that scale."
+    - "I'm a tech consultant based in Surrey. My background is in data engineering, platform management, and technical project delivery. I work with small businesses in the UK and startups further afield, bringing the same rigour to smaller teams without the complexity or the price tag."
   cta:
     label: "More about me"
     href: "/about"
