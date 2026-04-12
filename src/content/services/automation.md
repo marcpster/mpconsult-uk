@@ -8,8 +8,8 @@ features:
   - Manual processes replaced with automation
   - Scale your output without scaling your team
 proof:
-  client: "Recruitment firm"
-  result: "£140k annual value from streamlined operations"
+  client: "Recruitment startup"
+  result: "Data enrichment, webhook integrations, and CRM consolidation, cutting out the manual admin that was dominating the team's week"
 ---
 
 ## What you get
