@@ -1,6 +1,6 @@
 ---
 title: "Automation"
-tagline: "Stop doing the same thing twice"
+tagline: "Workflows, integrations, and the tech tricks to get tools talking"
 icon: "cog"
 order: 1
 features:

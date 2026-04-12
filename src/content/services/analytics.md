@@ -1,6 +1,6 @@
 ---
 title: "Analytics"
-tagline: "See what's actually working"
+tagline: "Know where your leads come from and what they cost"
 icon: "chart"
 order: 2
 features:

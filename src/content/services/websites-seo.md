@@ -1,6 +1,6 @@
 ---
 title: "Websites & SEO"
-tagline: "A site that works for you, and gets found"
+tagline: "Fast sites with search visibility built in"
 icon: "globe"
 order: 4
 features:

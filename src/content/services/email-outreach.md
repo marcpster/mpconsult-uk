@@ -1,6 +1,6 @@
 ---
 title: "Email & Outreach"
-tagline: "Reach people who want to hear from you"
+tagline: "Email infrastructure that actually delivers"
 icon: "mail"
 order: 3
 features:
