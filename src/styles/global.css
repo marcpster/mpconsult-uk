@@ -119,6 +119,31 @@
     @apply text-accent-600 dark:text-accent-400 underline;
   }
 
+  /* Figures: image + caption blocks inside markdown content. */
+
+  .prose figure {
+    @apply my-8 flex flex-col items-center;
+  }
+
+  .prose figure img {
+    @apply rounded-xl;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .prose figure figcaption {
+    @apply text-sm italic text-neutral-500 dark:text-neutral-400 mt-3 text-center;
+    max-width: 32rem;
+  }
+
+  /* Case-study figures default to a mobile-screenshot-narrow width so they
+     don't dominate the column. Override per-figure with inline style if a
+     wider image is wanted. */
+  .prose figure.case-study-figure img {
+    max-width: 20rem;
+    width: 100%;
+  }
+
   /* Callouts — Obsidian-style, rendered via remark-obsidian-callout.
      Plugin output: <blockquote class="callout-<type>" data-callout="<type>" ...>
        <div class="callout-title">

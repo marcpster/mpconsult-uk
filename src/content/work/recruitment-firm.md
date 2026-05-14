@@ -58,6 +58,11 @@ What got built:
 
 **An "is the pipeline alive?" dashboard.** Background jobs fail silently. So the CRM home page now shows three health indicators, one for each feed (LinkedIn sync, campaign behaviour, platform sign-ups). Each one goes green only when data has arrived recently and the last run was clean. Amber if something went wrong. Red if it's gone quiet. Alongside them are live counts: job changes detected, new platform sign-ups, campaign replies. The point is to spot trouble before someone has to firefight it.
 
+<figure class="case-study-figure">
+  <img src="/work/searchive/dashboard-mobile.svg" alt="The SearcHive CRM dashboard on mobile, showing the LeadDelta sync health card with a green healthy status and the Job Changes KPI tile below it." />
+  <figcaption>The CRM home page on mobile: sync running healthy, with yesterday's flagged role changes.</figcaption>
+</figure>
+
 **Campaign behaviour flowing into the CRM.** The CRM now records, automatically, what each prospect is doing in an email campaign. Opens, clicks, replies, bounces, unsubscribes. The team didn't have that visibility before. There's also a redesigned activity timeline that an operator can actually work in. Filter by what happened and where it came from, save useful views, export to a spreadsheet.
 
 **Platform sign-ups flowing into the CRM**, built jointly with SearcHive's platform developer. A registration on their product now becomes a flagged contact automatically.
