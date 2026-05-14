@@ -59,7 +59,7 @@ What got built:
 **An "is the pipeline alive?" dashboard.** Background jobs fail silently. So the CRM home page now shows three health indicators, one for each feed (LinkedIn sync, campaign behaviour, platform sign-ups). Each one goes green only when data has arrived recently and the last run was clean. Amber if something went wrong. Red if it's gone quiet. Alongside them are live counts: job changes detected, new platform sign-ups, campaign replies. The point is to spot trouble before someone has to firefight it.
 
 <figure class="case-study-figure">
-  <img src="/work/searchive/dashboard-mobile.svg" alt="The SearcHive CRM dashboard on mobile, showing the LeadDelta sync health card with a green healthy status and the Job Changes KPI tile below it." />
+  <img src="/work/searchive/dashboard-mobile.png" alt="The SearcHive CRM dashboard on mobile, showing the LeadDelta sync health card with a green healthy status and the Job Changes KPI tile below it." />
   <figcaption>The CRM home page on mobile: sync running healthy, with yesterday's flagged role changes.</figcaption>
 </figure>
 
