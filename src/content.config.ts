@@ -24,6 +24,7 @@ const work = defineCollection({
     title: z.string(),
     client: z.string(),
     logo: z.string().optional(),
+    website: z.string().url().optional(),
     industry: z.string(),
     services: z.array(z.string()),
     stats: z.array(z.object({

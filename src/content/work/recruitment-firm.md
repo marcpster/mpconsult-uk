@@ -2,6 +2,7 @@
 title: "Build It, Don't Rent It"
 client: "SearcHive"
 logo: "/work/searchive/searchive-logo.jpg"
+website: "https://searchive.ai"
 industry: "Finance & accounting recruitment startup"
 services:
   - Custom Development
