@@ -7,7 +7,8 @@
       "Bash(curl:*)",
       "Bash(git add:*)",
       "Bash(git commit -m ':*)",
-      "Bash(grep -A1 'title:' /Users/marcpower/git/websites/mpconsult-uk/src/content/services/*.md)"
+      "Bash(grep -A1 'title:' /Users/marcpower/git/websites/mpconsult-uk/src/content/services/*.md)",
+      "Bash(git push *)"
     ]
   }
 }
