@@ -21,7 +21,19 @@ const { Content } = await render(study);
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Header -->
       <header class="mb-12">
-        <p class="text-accent-600 dark:text-accent-400 font-medium mb-2">{study.data.industry}</p>
+        <div class="flex items-center gap-3 mb-4">
+          {study.data.logo && (
+            <img
+              src={study.data.logo}
+              alt={`${study.data.client} logo`}
+              class="w-10 h-10 rounded-lg object-cover flex-shrink-0"
+            />
+          )}
+          <div class="leading-tight">
+            <p class="font-semibold text-neutral-900 dark:text-neutral-100">{study.data.client}</p>
+            <p class="text-sm text-accent-600 dark:text-accent-400">{study.data.industry}</p>
+          </div>
+        </div>
         <h1 class="text-neutral-900 dark:text-neutral-100 mb-4">
           {study.data.title}
         </h1>

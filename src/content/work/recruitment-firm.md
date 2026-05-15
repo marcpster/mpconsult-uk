@@ -1,7 +1,8 @@
 ---
 title: "Build It, Don't Rent It"
 client: "SearcHive"
-industry: "Finance & accounting recruitment"
+logo: "/work/searchive/searchive-logo.jpg"
+industry: "Finance & accounting recruitment startup"
 services:
   - Custom Development
   - Automation
@@ -83,7 +84,7 @@ Projected (and being measured as the engagement closes out): around 27 hours a m
 There's a structural shift behind the numbers. SearcHive's growth engine isn't a pile of subscriptions held together by hand any more. It's their own system, documented, with an audit trail, and they own it. That matters more than it might sound when there's an exit on the horizon.
 
 > [!quote] Ben Davies, COO, SearcHive
-> *[Placeholder — a short comment from Ben goes here. Ideally touching on the owned-infrastructure angle, or the visibility the team now has into what's happening day-to-day.]*
+> He could have sold us another subscription. Instead he built it into the system we already own. The code is ours, the data is ours, no vendor in the middle.
 
 ## Services delivered
 
