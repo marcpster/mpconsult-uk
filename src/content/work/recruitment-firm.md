@@ -5,7 +5,7 @@ logo: "/work/searchive/searchive-logo.jpg"
 website: "https://searchive.ai"
 industry: "Finance & accounting recruitment startup"
 services:
-  - Custom Development
+  - CRM
   - Automation
   - Email & Outreach
 stats:
@@ -25,10 +25,18 @@ order: 1
 **The brief in a line.** A working but entirely manual growth engine. Six disconnected tools, around 35 hours a month of hand-cranked admin, and email deliverability quietly eroding. Rather than wire together another stack of SaaS subscriptions, build bespoke automation into the systems the client already owns.
 
 > [!info] At a glance
+> - Cold-email tool wired in so opens, clicks, replies and bounces land alongside each contact in the CRM
+> - Cold-outreach sender reputation protected on a separately warmed domain, with brand-domain email authentication put right
 > - Around **95,000** LinkedIn profiles flowing into the CRM
 > - CRM contacts on the live LinkedIn feed: **~10,500 → ~28,200**
-> - A three-card health dashboard so silent failures don't stay silent
 > - Replaced a paid SaaS subscription, same job for less, no lock-in
+> <!-- Candidates to shortlist later (cull before publish): -->
+> - Live KPI tiles on the CRM home page tracking job changes flagged, new sign-ups, and campaign replies
+> - A run of CRM upgrades: redesigned activity timeline, saved views, exports, dashboard
+> - Multiple CRM features built into the system they already own, not stitched together from third-party tools
+> - Product sign-ups landing in the CRM as flagged contacts the moment someone joins
+> - Key tools now linked end to end: LinkedIn data, campaign behaviour, and platform sign-ups all feeding one CRM
+> - LeadDelta chosen as the enrichment tool after evaluation, now delivering **~28,200** enriched contacts
 
 ## The challenge
 
