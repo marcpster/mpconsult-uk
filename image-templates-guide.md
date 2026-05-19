@@ -7,7 +7,7 @@ images. They are screenshotted by hand and are not part of the build.
 |----------|----------------|-------------|----------|
 | `og-image-template.html` | `.og-image` | 1200x630 | Social preview (`og-image.png`) |
 | `linkedin-profile-banner-template.html` | `.banner` | 1584x396 | LinkedIn personal profile banner |
-| `linkedin-company-cover-template.html` | `.cover` | 1128x191 | LinkedIn company Page cover |
+| `linkedin-company-cover-template.html` | `.cover` | 1128x192 | LinkedIn company Page cover |
 
 ## Method (same for all three)
 
