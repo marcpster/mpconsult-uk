@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>LinkedIn Company Cover Template</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    /* Halved for Retina - captures at 2x to produce 1128x191.
+       This is the LinkedIn company Page cover image. */
+    .cover {
+      width: 564px;
+      height: 95.5px;
+      background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Subtle accent stripe along the top */
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #f86a4d, #e54d2e);
+    }
+
+    /* SAFE ZONE
+       LinkedIn overlaps the company logo over the lower-left of the cover.
+       Keep text centred and clear of the left edge. The cover is short, so
+       one concise line plus the domain works best. */
+    .content {
+      text-align: center;
+      padding: 0 90px;
+    }
+
+    h1 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #171717;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+
+    .domain {
+      font-size: 10px;
+      font-weight: 500;
+      color: #e54d2e;
+    }
+
+    /* Dark version - uncomment to use */
+    /*
+    .cover {
+      background: linear-gradient(135deg, #0a0a0a 0%, #171717 100%);
+    }
+    h1 { color: #fafafa; }
+    */
+  </style>
+</head>
+<body>
+  <div class="cover">
+    <div class="content">
+      <h1>Tech and marketing, sorted.</h1>
+      <p class="domain">mpconsult.uk</p>
+    </div>
+  </div>
+</body>
+</html>
