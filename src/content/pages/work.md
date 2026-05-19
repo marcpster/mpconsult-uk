@@ -1,8 +1,8 @@
 ---
 title: Work
-description: "Case studies and results from working with small businesses across recruitment, finance, and creative services."
+description: "Case studies and results from working with businesses across recruitment, finance, and creative services."
 heading: Work
-subtitle: "Real results from real projects. Numbers, not adjectives."
+subtitle: "Real results from real projects."
 cardCta: "Read the case study"
 cta:
   heading: "Want results like these?"

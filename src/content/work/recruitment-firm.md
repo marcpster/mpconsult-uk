@@ -27,7 +27,7 @@ order: 1
 > [!info] At a glance
 > - Cold-email tool wired in so opens, clicks, replies and bounces land alongside each contact in the CRM
 > - Cold-outreach sender reputation protected on a separately warmed domain, with brand-domain email authentication put right
-> - Around **95,000** LinkedIn profiles flowing into the CRM
+> - **~95,000** LinkedIn profiles flowing into the CRM
 > - CRM contacts on the live LinkedIn feed: **~10,500 → ~28,200**
 > - Replaced a paid SaaS subscription, same job for less, no lock-in
 > <!-- Candidates to shortlist later (cull before publish): -->
