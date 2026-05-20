@@ -1,8 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300" role="img" aria-label="MP Consulting logo">
-  <!-- MP Consulting company mark. Matches favicon.svg, scaled for the
-       LinkedIn company Page logo (upload at 300x300). LinkedIn needs a
-       PNG or JPG, so render this SVG to PNG before uploading. -->
-  <rect width="300" height="300" rx="56" fill="#f86a4d"/>
+  <!-- MP Consulting company mark for the LinkedIn company Page logo
+       (upload at 300x300). Rendered as a flat solid coral square so
+       that LinkedIn's own auto-crop does the rounding. Avoids dark-
+       mode halo artefacts that can appear when alpha-rounded corners
+       are composited badly. LinkedIn needs PNG or JPG, so render this
+       SVG to PNG before uploading. -->
+  <rect width="300" height="300" fill="#f86a4d"/>
   <text x="150" y="206" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="600" font-size="150" fill="#ffffff">MP</text>
 
   <!-- Gradient variant: change the rect fill above to fill="url(#brand)"
