@@ -2,7 +2,7 @@
 title: About
 description: "Meet Marc. Tech consultant helping small businesses and startups get real results without the overhead."
 heading: "Hi, I'm Marc"
-subtitle: "I help small businesses and startups sort out their tech stack, so it delivers without the drama."
+subtitle: "I help small businesses and startups get up and running with AI and automation, in time-boxed engagements that leave you self-sufficient."
 cta:
   heading: "Want to work together?"
   description: "Let's have a conversation. No pitch, no pressure, just a chat about what you're trying to achieve."
@@ -12,7 +12,7 @@ cta:
 
 ## The short version
 
-I'm a tech consultant based in Surrey. My background is in data engineering, platform management, and technical project delivery. I work with small businesses in the UK and startups further afield, bringing the same rigour to smaller teams without the complexity or the price tag.
+I'm a technical consultant based in Surrey. Most small businesses I meet know they should be doing more with AI and automation, but the options on offer are the wrong shape: a big consultancy that bills for months, a course that leaves you with notes but nothing built, or a stack of subscriptions that solve part of the problem but lock you into something you don't fully understand. I do something different. I come in for a defined period, build it with you, then hand it over and leave.
 
 ## My approach
 
