@@ -2,14 +2,17 @@
 title: Home
 description: "Tech consulting for small businesses and startups. Websites, analytics, automation, and integrations that actually work."
 hero:
-  subheadline: "Built with you, handed over, yours to run. No retainer, no lock-in."
+  name: "Marc Power"
+  location: "Surrey, UK"
+  subheadline: "Built with you, handed over, yours to run."
   cta:
     label: "Let's talk"
     href: "/contact"
 about:
-  heading: "Hi, I'm Marc"
   paragraphs:
-    - "I'm a technical consultant based in Surrey. I come in for a defined period, work out what's actually worth doing, and build it with you. Then I hand it over and leave. You own the result, you understand how it works, and you don't need me on a retainer to keep it running."
+    - "I'm Marc. Most of what I do starts the same way: a spreadsheet has quietly become a system, an inbox has become a workflow, and nobody's quite sure what to do next."
+    - "I do the nerdy legwork most agencies won't touch — partly because I quite enjoy it."
+  pullquote: "It usually saves you a day a week."
   cta:
     label: "More about me"
     href: "/about"

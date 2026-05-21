@@ -17,12 +17,18 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
   <section class="py-20 md:py-32">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row md:items-center gap-8 md:gap-12">
-        <img
-          src="/avatar.png"
-          alt="MP"
-          class="w-24 h-24 md:w-32 md:h-32 rounded-full bg-neutral-200 dark:bg-neutral-800 flex-shrink-0"
-          onerror="this.style.display='none'"
-        />
+        <div class="flex flex-col items-center gap-3 flex-shrink-0">
+          <img
+            src="/avatar.png"
+            alt={page.data.hero.name}
+            class="w-24 h-24 md:w-32 md:h-32 rounded-full bg-neutral-200 dark:bg-neutral-800"
+            onerror="this.style.display='none'"
+          />
+          <div class="text-center">
+            <div class="text-sm font-semibold text-neutral-900 dark:text-neutral-100">{page.data.hero.name}</div>
+            <div class="text-xs text-neutral-500 dark:text-neutral-400">{page.data.hero.location}</div>
+          </div>
+        </div>
         <div>
           <h1 class="text-neutral-900 dark:text-neutral-100 mb-4">
             {site.tagline}
@@ -41,9 +47,41 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
     </div>
   </section>
 
+  <!-- About Teaser Section -->
+  <section class="py-16 md:py-24 bg-neutral-100 dark:bg-neutral-900 border-y border-neutral-200 dark:border-neutral-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <blockquote class="border-l-2 border-accent-500 pl-6 mb-8">
+          {page.data.about.paragraphs.map((para: string) => (
+            <p class="text-neutral-700 dark:text-neutral-300 mb-4">
+              {para}
+            </p>
+          ))}
+          {page.data.about.pullquote && (
+            <p class="text-lg md:text-xl font-medium text-neutral-900 dark:text-neutral-100 mt-6 mb-6">
+              {page.data.about.pullquote}
+            </p>
+          )}
+          <cite class="block text-sm font-medium text-accent-600 dark:text-accent-400 not-italic text-right">
+            — Marc
+          </cite>
+        </blockquote>
+        <a
+          href={page.data.about.cta.href}
+          class="inline-flex items-center text-accent-600 dark:text-accent-400 font-medium hover:text-accent-700 dark:hover:text-accent-300"
+        >
+          {page.data.about.cta.label}
+          <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Services Section -->
   {page.data.services && (
-    <section class="py-16 md:py-24 bg-neutral-100 dark:bg-neutral-900">
+    <section class="py-16 md:py-24">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-neutral-900 dark:text-neutral-100 mb-8">
           {page.data.services.heading}
@@ -133,31 +171,6 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
       </div>
     </section>
   )}
-
-  <!-- About Teaser Section -->
-  <section class="py-16 md:py-24 bg-neutral-100 dark:bg-neutral-900">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-2xl">
-        <h2 class="text-neutral-900 dark:text-neutral-100 mb-4">
-          {page.data.about.heading}
-        </h2>
-        {page.data.about.paragraphs.map((para: string, i: number) => (
-          <p class={`text-neutral-700 dark:text-neutral-300 ${i < page.data.about.paragraphs.length - 1 ? 'mb-4' : 'mb-6'}`}>
-            {para}
-          </p>
-        ))}
-        <a
-          href={page.data.about.cta.href}
-          class="inline-flex items-center text-accent-600 dark:text-accent-400 font-medium hover:text-accent-700 dark:hover:text-accent-300"
-        >
-          {page.data.about.cta.label}
-          <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
 
   <!-- Final CTA Section -->
   <section class="py-20 md:py-32">
