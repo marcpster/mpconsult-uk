@@ -10,7 +10,7 @@ hero:
     href: "/contact"
 about:
   paragraphs:
-    - "I'm Marc. Most of what I do starts the same way: a spreadsheet has quietly become a system, an inbox has become a workflow, and nobody's quite sure what to do next."
+    - "Hi, I'm Marc. Most of what I do starts the same way: a spreadsheet has quietly become a system, an inbox has become a workflow, and nobody's quite sure what to do next."
     - "I do the nerdy legwork most agencies won't touch — partly because I quite enjoy it."
   pullquote: "It usually saves you a day a week."
   cta:
