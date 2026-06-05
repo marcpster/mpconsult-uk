@@ -3,11 +3,11 @@ title: "Build It, Don't Rent It"
 client: "SearcHive"
 logo: "/work/searchive/searchive-logo.jpg"
 website: "https://searchive.ai"
-industry: "Finance & accounting recruitment startup"
+industry: "Finance Recruitment Startup"
 services:
   - CRM
   - Automation
-  - Email & Outreach
+  - Outreach & GTM
 stats:
   - value: "Deliverability Fixed"
     label: "Brand-domain email authentication put right"
