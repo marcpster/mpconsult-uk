@@ -2,7 +2,7 @@
 title: "Automation"
 tagline: "Workflows, integrations, and the tech tricks to get tools talking"
 icon: "cog"
-order: 1
+order: 2
 features:
   - Tools reviewed and properly connected
   - Manual processes replaced with automation

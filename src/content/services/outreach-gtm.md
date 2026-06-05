@@ -2,7 +2,7 @@
 title: "Outreach & GTM"
 tagline: "Lead pipelines and cold outreach, engineered to convert"
 icon: "send"
-order: 4
+order: 3
 features:
   - Clean, targeted, compliant prospect lists
   - Your CRM, enrichment, and outreach properly connected

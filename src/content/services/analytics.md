@@ -2,7 +2,7 @@
 title: "Data & Reporting"
 tagline: "The numbers that run your business, made clear"
 icon: "chart"
-order: 2
+order: 5
 features:
   - Your data pulled together from the tools you already use
   - Reports you'll actually read

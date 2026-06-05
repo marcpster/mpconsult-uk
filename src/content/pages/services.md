@@ -1,7 +1,7 @@
 ---
 title: Services
 description: "Tech services for small businesses and startups. Websites, SEO, email, analytics, automation, and the integrations that tie them together."
-heading: Services
+heading: What I Do
 subtitle: ""
 cta:
   heading: "Not sure what you need?"

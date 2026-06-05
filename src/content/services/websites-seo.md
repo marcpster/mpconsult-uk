@@ -2,7 +2,7 @@
 title: "Websites & SEO"
 tagline: "Fast, modern sites that load, rank, and stay out of your way"
 icon: "globe"
-order: 5
+order: 6
 features:
   - Modern sites that load fast and rank well
   - SEO and AI-friendly foundations built in

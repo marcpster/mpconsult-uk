@@ -2,7 +2,7 @@
 title: "Email"
 tagline: "Email that lands in inboxes, not spam"
 icon: "mail"
-order: 3
+order: 4
 features:
   - Emails that land in inboxes, not spam
   - Sender reputation and authentication put right
