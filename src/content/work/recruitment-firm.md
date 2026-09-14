@@ -22,21 +22,17 @@ featured: true
 order: 1
 ---
 
-**The brief in a line.** A working but entirely manual growth engine. Six disconnected tools, around 35 hours a month of hand-cranked admin, and email deliverability quietly eroding. Rather than wire together another stack of SaaS subscriptions, build bespoke automation into the systems the client already owns.
+**The starting point.** A working but entirely manual growth engine. Six disconnected tools, ~30 hours a month of manual admin, and no email authentication in place.
 
-> [!info] At a glance
-> - Cold-email tool wired in so opens, clicks, replies and bounces land alongside each contact in the CRM
-> - Cold-outreach sender reputation protected on a separately warmed domain, with brand-domain email authentication put right
-> - **~95,000** LinkedIn profiles flowing into the CRM
-> - CRM contacts on the live LinkedIn feed: **~10,500 → ~28,200**
-> - Replaced a paid SaaS subscription, same job for less, no lock-in
-> <!-- Candidates to shortlist later (cull before publish): -->
-> - Live KPI tiles on the CRM home page tracking job changes flagged, new sign-ups, and campaign replies
-> - A run of CRM upgrades: redesigned activity timeline, saved views, exports, dashboard
-> - Multiple CRM features built into the system they already own, not stitched together from third-party tools
-> - Product sign-ups landing in the CRM as flagged contacts the moment someone joins
-> - Key tools now linked end to end: LinkedIn data, campaign behaviour, and platform sign-ups all feeding one CRM
-> - LeadDelta chosen as the enrichment tool after evaluation, now delivering **~28,200** enriched contacts
+**The design decision.** Rather than wire together a stack of expensive SaaS subscriptions, build bespoke automation into the systems the client already owns.
+
+> [!info] Delivered, at a glance
+> - Rejected expensive SaaS CRM solution in favour of AI-coded solution with custom connections
+> - Saved the team hours of manual CSV updates by building automatic synchronisation for tools and sign-ups
+> - This included setting up the daily syncing of **~95,000** critical LinkedIn leads
+> - And adding actionable enrichment fields at no extra cost (job change alerts, email history)
+> - Email Outreach _opens_, _clicks_, _replies_ and _bounces_ to automatically land alongside the contact
+> - Dashboard features added including: Live KPI tiles, activity timelines and monitoring of connected data
 
 ## The challenge
 
