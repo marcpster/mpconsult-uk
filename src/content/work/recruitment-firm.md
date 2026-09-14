@@ -27,7 +27,7 @@ order: 1
 **The design decision.** Rather than wire together a stack of expensive SaaS subscriptions, build bespoke automation into the systems the client already owns.
 
 > [!info] Delivered, at a glance
-> - Rejected an expensive SaaS CRM solution in favour of AI-coded solution with custom connections
+> - Rejected an expensive SaaS CRM solution in favour of an AI-coded solution with custom connections
 > - Saved the team hours of manual CSV updates by building automatic synchronisation for tools and sign-ups
 > - This included setting up the daily syncing of **~95,000** critical LinkedIn leads
 > - And adding actionable enrichment fields at no extra cost (job-change alerts, email history)
@@ -75,7 +75,7 @@ What got built:
 
 ## Results
 
-The headline numbers: around 95,000 LinkedIn profiles synced into the CRM. Brand-domain email authentication fixed, email delivery fixes. A dedicated, warmed cold-outreach domain now in place.
+The headline numbers: around 95,000 LinkedIn profiles synced into the CRM. Brand-domain email authentication fixed, email delivery fixed. A dedicated, warmed cold-outreach domain now in place.
 
 Projected around 30 hours a month of manual work removed.
 
