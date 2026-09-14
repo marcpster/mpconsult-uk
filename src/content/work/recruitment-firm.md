@@ -27,47 +27,40 @@ order: 1
 **The design decision.** Rather than wire together a stack of expensive SaaS subscriptions, build bespoke automation into the systems the client already owns.
 
 > [!info] Delivered, at a glance
-> - Rejected expensive SaaS CRM solution in favour of AI-coded solution with custom connections
+> - Rejected an expensive SaaS CRM solution in favour of AI-coded solution with custom connections
 > - Saved the team hours of manual CSV updates by building automatic synchronisation for tools and sign-ups
 > - This included setting up the daily syncing of **~95,000** critical LinkedIn leads
-> - And adding actionable enrichment fields at no extra cost (job change alerts, email history)
-> - Email Outreach _opens_, _clicks_, _replies_ and _bounces_ to automatically land alongside the contact
-> - Dashboard features added including: Live KPI tiles, activity timelines and monitoring of connected data
+> - And adding actionable enrichment fields at no extra cost (job-change alerts, email history)
+> - Email Outreach _opens_, _clicks_, _replies_ and _bounces_ now automatically land alongside the contact
+> - Dashboard features added: live KPI tiles, activity timelines and monitoring of connected data
 
 ## The challenge
 
 SearcHive places finance and accounting professionals. The sector has a real talent shortage, which translates into a lot of churn. People move firms constantly. Their work email addresses go stale almost as fast as you can collect them.
 
-The growth engine worked. But it was held together by hand. There were six tools, and none of them really talked to each other. LinkedIn Sales Navigator. A LinkedIn outreach tool. A cold-email platform. An email finder. An email validator. A CRM the team had built themselves on Replit.
+The growth engine worked, but as a manual process. There were six tools, none of which were really talking to each other. 
 
-Roughly 35 hours every month went on the glue work between them. Finding email addresses. Validating them. Building lists. De-duplicating across team members so two recruiters didn't approach the same person. Chasing bounces.
+At least 30 hours every month went on the glue work between them. Finding email addresses. Validating them. Building and uploading lists. Making sure that Outreach was going to the right email and not someone who has just bounced in another tool.
 
-Email coverage sat at around 60%. Deliverability was degrading too. Part of the reason was that the brand domain's email authentication (SPF, DKIM, DMARC) was misconfigured in ways nobody had spotted. A chunk of legitimate mail was quietly landing in spam.
-
-There was a strategic overlay as well. The founders are building toward an exit. So data that's clean, compliant, and defensible isn't a nice-to-have. It's part of what the business is worth.
+There was a strategic aspect too - the founders are building toward an exit. So data that's clean, compliant, and defensible is essential. 
 
 ## The approach: build on what they own
 
-The obvious move would have been to recommend a SaaS stack. A proper CRM, an enrichment platform, some middleware to wire it together. There was a recommendation along those lines on the table early on.
+The obvious move would have been to recommend a SaaS stack. A proper CRM, an enrichment platform, some middleware to wire it together. This was the recommendation on the table early on.
 
-It evolved as the options got tested. Which is the point of testing. One of the leading candidates was a well-regarded enrichment platform. We evaluated it. It worked fine. We parked it. The pricing was usage-based and scaled with the size of SearcHive's database, and going with it would have meant their prospect data living inside a vendor's system.
+We evaluated a well-regarded enrichment platform. It worked fine, but we parked it when we discovered pricing was usage-based and scaled with the size of SearcHive's database.
 
 The decision instead: **build the automation into the infrastructure SearcHive already owns.**
 
-They had a custom CRM on Replit. Replit bundles AI-assisted development, hosting, and version control in one place. So rather than renting capability, we built it. Bespoke features in their app, on their database, in their git history.
+They had a custom CRM on Replit. Replit bundles AI-assisted development, hosting, and version control in one place. So rather than renting capability, we built it.
 
 With AI-assisted development, building is fast enough that bespoke beats buy. The client ends up owning the code, the data, the deployment, and the change history outright. No lock-in. No per-seat creep. And it does exactly what they need, rather than 80% of what an off-the-shelf tool does.
 
 What got built:
 
-**A LinkedIn data pipeline.** A background job runs every morning. It pulls SearcHive's LinkedIn connection data into the CRM and flags when someone has changed roles. That's a recruitment signal, not just data hygiene. The job is built to look after itself. It recovers from interruptions, retries when something fails, copes with bad data, and shows a clear status on the dashboard when it can't. Around 95,000 profiles have flowed through it. CRM contacts on the live feed climbed from about 10,500 to about 28,200. A backlog of roughly 18,000 unmatched profiles was worked down and reconciled. The pipeline also replaced a paid LinkedIn-automation subscription, doing the same job for less and without the lock-in.
+**A LinkedIn data pipeline.** A background job runs every morning. It pulls SearcHive's LinkedIn connection data into the CRM and flags when someone has changed roles, providing a key lead signal. The job is built to look after itself, with a monitoring view on the dashboard.
 
 **An "is the pipeline alive?" dashboard.** Background jobs fail silently. So the CRM home page now shows three health indicators, one for each feed (LinkedIn sync, campaign behaviour, platform sign-ups). Each one goes green only when data has arrived recently and the last run was clean. Amber if something went wrong. Red if it's gone quiet. Alongside them are live counts: job changes detected, new platform sign-ups, campaign replies. The point is to spot trouble before someone has to firefight it.
-
-<figure class="case-study-figure">
-  <img src="/work/searchive/dashboard-mobile.png" alt="The SearcHive CRM dashboard on mobile, showing the LeadDelta sync health card with a green healthy status and the Job Changes KPI tile below it." />
-  <figcaption>The CRM home page on mobile: sync running healthy, with yesterday's flagged role changes.</figcaption>
-</figure>
 
 **Campaign behaviour flowing into the CRM.** The CRM now records, automatically, what each prospect is doing in an email campaign. Opens, clicks, replies, bounces, unsubscribes. The team didn't have that visibility before. There's also a redesigned activity timeline that an operator can actually work in. Filter by what happened and where it came from, save useful views, export to a spreadsheet.
 
@@ -75,21 +68,19 @@ What got built:
 
 **Deliverability put right.** Diagnosed and fixed the email authentication on the brand domain, which addressed the delivery failures the team had been living with. Stood up a separate, properly warmed domain for cold outreach.
 
-> [!tip] Principles that ran through the project
-> - Work out the real cost of a tool before recommending it. The cash cost at the client's actual volume, not the sticker price.
-> - Look hard at what's already there before replacing it. A home-built system you understand can be worth more than a polished one you don't.
-> - Don't pay for a tool before it's actually doing something. Sequence the spend.
+<figure class="case-study-figure">
+  <img src="/work/searchive/dashboard-mobile.png" alt="The dashboard on mobile, showing the LeadDelta sync health card with a green healthy status and the Job Changes KPI tile below it." />
+  <figcaption>The dashboard indicators on mobile: sync running healthy, with yesterday's flagged role changes.</figcaption>
+</figure>
 
 ## Results
 
-The headline numbers: around 95,000 LinkedIn profiles synced into the CRM, contacts on the live feed climbing from about 10,500 to about 28,200, and a backlog of roughly 18,000 unmatched profiles worked down and reconciled. Brand-domain email authentication fixed, addressing the delivery failures the team had been living with. A dedicated, warmed cold-outreach domain now in place.
+The headline numbers: around 95,000 LinkedIn profiles synced into the CRM. Brand-domain email authentication fixed, email delivery fixes. A dedicated, warmed cold-outreach domain now in place.
 
-Projected (and being measured as the engagement closes out): around 27 hours a month of manual work removed, worth roughly £10,000 a year in time. Email coverage moving from 60% to 85%. Response rates roughly doubling. An estimated extra 13 placements a year on the back of better data and protected deliverability.
-
-There's a structural shift behind the numbers. SearcHive's growth engine isn't a pile of subscriptions held together by hand any more. It's their own system, documented, with an audit trail, and they own it. That matters more than it might sound when there's an exit on the horizon.
+Projected around 30 hours a month of manual work removed.
 
 > [!quote] Ben Davies, COO, SearcHive
-> He could have sold us another subscription. Instead he built it into the system we already own. The code is ours, the data is ours, no vendor in the middle.
+> Marc could have sold us another subscription. Instead he built it into the system we already own. The code is ours, the data is ours, no vendor in the middle.
 
 ## Services delivered
 
@@ -98,3 +89,8 @@ There's a structural shift behind the numbers. SearcHive's growth engine isn't a
 - Email deliverability diagnosis and remediation; cold-outreach domain setup
 - Data-layer design and an idempotent migration path
 - Documentation and handover
+
+> [!tip] Principles that ran through the project
+> - Work out the real cost of a tool before recommending it - the cash cost at the client's actual volume and the required tier.
+> - Look hard at what's already there before replacing it. A home-built system you understand can be worth more than a polished one you don't.
+> - Don't pay for a tool before it's actually doing something. Sequence the spend.
