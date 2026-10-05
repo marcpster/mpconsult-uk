@@ -4,10 +4,31 @@ description: "Tech consulting for small businesses and startups. Websites, analy
 hero:
   name: "Marc Power"
   location: "Surrey, UK"
-  subheadline: "Built with you, handed over, yours to run."
+  headline: "Get a day a week back."
+  subheadline: "I automate the admin that's quietly eating your week, using AI and the tools you already pay for. Built with you, handed over, yours to run."
+  proof:
+    text: "Built to remove ~30 hours a month of manual admin for a recruitment startup."
+    linkLabel: "See how"
+    href: "/work/recruitment-firm"
   cta:
     label: "Book a free call"
     href: "/contact"
+hours:
+  heading: "Where the hours go"
+  intro: "Most of the week isn't lost to one big job. It's the small, repetitive ones. These are the usual suspects."
+  items:
+    - tag: "AI agent"
+      before: "Answering the same enquiries by hand"
+      after: "An agent drafts replies and qualifies new leads. You approve with one click."
+    - tag: "AI agent"
+      before: "Chasing quotes, invoices and follow-ups"
+      after: "An agent tracks who needs a nudge and sends it on time."
+    - tag: "Automation"
+      before: "Re-typing the same details into three systems"
+      after: "Your tools connected, so the data moves itself."
+    - tag: "Reporting"
+      before: "Pulling together Monday's numbers"
+      after: "A dashboard that's always up to date."
 about:
   paragraphs:
     - "Hi, I'm Marc. Most of what I do starts the same way: a spreadsheet has quietly become a system, an inbox has become a workflow, and nobody's quite sure what to do next."
