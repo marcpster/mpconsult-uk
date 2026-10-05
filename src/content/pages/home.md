@@ -6,7 +6,7 @@ hero:
   location: "Surrey, UK"
   subheadline: "Built with you, handed over, yours to run."
   cta:
-    label: "Let's talk"
+    label: "Book a free call"
     href: "/contact"
 about:
   paragraphs:
