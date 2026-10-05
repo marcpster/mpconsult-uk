@@ -31,7 +31,7 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
         </div>
         <div>
           <h1 class="text-accent-600 dark:text-accent-400 mb-4">
-            {site.tagline}
+            {page.data.hero.headline ?? site.tagline}
           </h1>
           <p class="text-xl text-neutral-600 dark:text-neutral-400 mb-8">
             {page.data.hero.subheadline}
@@ -42,10 +42,47 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
           >
             {page.data.hero.cta.label}
           </a>
+          {page.data.hero.proof && (
+            <p class="mt-6 text-sm text-neutral-500 dark:text-neutral-400">
+              {page.data.hero.proof.text}{' '}
+              <a href={page.data.hero.proof.href} class="font-medium whitespace-nowrap">
+                {page.data.hero.proof.linkLabel} &rarr;
+              </a>
+            </p>
+          )}
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Where the Hours Go -->
+  {page.data.hours && (
+    <section class="pb-16 md:pb-24">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-neutral-900 dark:text-neutral-100 mb-3">
+          {page.data.hours.heading}
+        </h2>
+        <p class="text-lg text-neutral-600 dark:text-neutral-400 mb-8 max-w-2xl">
+          {page.data.hours.intro}
+        </p>
+        <ul class="grid md:grid-cols-2 gap-4">
+          {page.data.hours.items.map((item: { tag: string; before: string; after: string }) => (
+            <li class="p-6 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+              <span class="inline-block mb-3 px-2.5 py-0.5 text-xs font-semibold rounded-full bg-accent-100 text-accent-700 dark:bg-accent-950 dark:text-accent-300">
+                {item.tag}
+              </span>
+              <p class="text-neutral-500 dark:text-neutral-400 line-through decoration-neutral-300 dark:decoration-neutral-600">
+                {item.before}
+              </p>
+              <p class="mt-2 font-medium text-neutral-900 dark:text-neutral-100">
+                {item.after}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )}
 
   <!-- About Teaser Section -->
   <section class="py-16 md:py-24 bg-neutral-100 dark:bg-neutral-900 border-y border-neutral-200 dark:border-neutral-800">
