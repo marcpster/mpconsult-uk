@@ -6,12 +6,17 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "playwright test",
+    "test:report": "playwright show-report"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.16.11",
     "remark-obsidian-callout": "^1.5.1",
     "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
   }
 }
