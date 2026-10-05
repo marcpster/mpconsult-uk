@@ -26,3 +26,7 @@ pnpm-debug.log*
 # Obsidian vault symlink
 # ln -s "/Users/marcpower/Library/Mobile Documents/iCloud~md~obsidian/Documents/knowledge-system/Resources/MPC Website" ./kb-link-mpc-website
 kb-link-mpc-website
+
+# Playwright
+playwright-report/
+test-results/
